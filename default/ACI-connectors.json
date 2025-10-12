@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1760310712296,
+    "description" : "Basic 1",
+    "identifier" : "ACI-connectors",
+    "lastModifiedTimestamp" : 1760310712296,
+    "name" : "ACI connectors",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
