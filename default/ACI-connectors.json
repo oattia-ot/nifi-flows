@@ -319,8 +319,8 @@
       } ],
       "parameterContextName" : "Connector ACI Server Parameters",
       "position" : {
-        "x" : -292.50006103515625,
-        "y" : -118.3891716003418
+        "x" : -304.0,
+        "y" : -120.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -845,7 +845,7 @@
         "type" : "OUTPUT_PORT"
       } ],
       "position" : {
-        "x" : -312.0,
+        "x" : -304.0,
         "y" : 136.0
       },
       "processGroups" : [ ],
