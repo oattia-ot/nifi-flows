@@ -31,7 +31,650 @@
       "x" : 0.0,
       "y" : 0.0
     },
-    "processGroups" : [ ],
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 669.178445948002,
+          "y" : 513.2526982027368
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+          "id" : "6a018801-2cf5-3f25-824f-25ffed09161b",
+          "name" : "ConnectorGroupRouter",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "1d4a8e81-26d1-35fc-9788-97fc740f4a8f",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "id" : "e357e0fa-20b3-3666-87a8-ca2bdd8f2a57",
+          "name" : "Connector Request",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+          "id" : "91de277b-f20b-35bc-85e5-100d2262c135",
+          "name" : "ACI Success",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "cbc539a5-a3d3-3c93-9f6d-3112a48c3751",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "id" : "58986c8a-04e3-37bc-ad2b-9c7e1b8361ec",
+          "name" : "Connector ACI Success",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 903.2036094116718,
+          "y" : 512.9346363376328
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "id" : "285db620-93da-3685-92e1-819ce0a774de",
+          "name" : "Connector Response",
+          "type" : "INPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "8515803b-c53c-30de-a022-24d9c1f32f07",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+          "id" : "6a018801-2cf5-3f25-824f-25ffed09161b",
+          "name" : "ConnectorGroupRouter",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+          "id" : "c62709fc-8a37-367d-9777-b3dd6a084599",
+          "name" : "ACI Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "df92adb7-fd33-3004-9446-53918622c378",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "id" : "4326e863-e76d-3711-8f13-c4b64955e920",
+          "name" : "Connector ACI Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "zIndex" : 0
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "logFileSuffix" : "",
+      "maxConcurrentTasks" : 1,
+      "name" : "Connector_ACI_Server",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "comments" : "",
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "c62709fc-8a37-367d-9777-b3dd6a084599",
+        "name" : "ACI Failure",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 1235.4297286399576,
+          "y" : 397.2671024996119
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      }, {
+        "allowRemoteAccess" : false,
+        "comments" : "",
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "91de277b-f20b-35bc-85e5-100d2262c135",
+        "name" : "ACI Success",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 1236.4297286399576,
+          "y" : 298.7801106172877
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "Connector ACI Server Parameters",
+      "position" : {
+        "x" : -292.50006103515625,
+        "y" : -118.3891716003418
+      },
+      "processGroups" : [ {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "58986c8a-04e3-37bc-ad2b-9c7e1b8361ec",
+            "name" : "Connector ACI Success",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "367d1a03-da19-3056-bb2b-c0c697dc7d47",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "46493ba9-642b-39c3-ae0e-365860d098c3",
+            "name" : "HandleAciResponse",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "e357e0fa-20b3-3666-87a8-ca2bdd8f2a57",
+            "name" : "Connector Request",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "b66c19eb-d097-3dc1-ba59-38bccb4a209c",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "request" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "6f0c9f33-a60e-34b1-a079-e6d36793c3f1",
+            "name" : "HandleAciRequest",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "4326e863-e76d-3711-8f13-c4b64955e920",
+            "name" : "Connector ACI Failure",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "4481693f-fee3-35f4-a163-854228ba66cc",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "46493ba9-642b-39c3-ae0e-365860d098c3",
+            "name" : "HandleAciResponse",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "46493ba9-642b-39c3-ae0e-365860d098c3",
+            "name" : "HandleAciResponse",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "e6909c24-bb88-345e-8e0d-6108aae6eec8",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+            "id" : "285db620-93da-3685-92e1-819ce0a774de",
+            "name" : "Connector Response",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ {
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "idol-nifi-framework",
+            "group" : "idol.nifi",
+            "version" : "25.1.0-nifi2"
+          },
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "idol-nifi-framework-api",
+              "group" : "idol.nifi",
+              "version" : "25.1.0-nifi2"
+            },
+            "type" : "idol.nifi.service.AciContextService"
+          } ],
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "494b9e2f-a096-3a87-b1ba-d8fc0731a6fc",
+          "name" : "AciContextServiceImpl",
+          "properties" : {
+            "Asynchronous Request Expiration" : "1 day",
+            "Maximum Outstanding Asynchronous Requests" : "5000",
+            "Asynchronous Response Expiration" : "30 days",
+            "Maximum Outstanding Synchronous Requests" : "500",
+            "Synchronous Request Expiration" : "5 min"
+          },
+          "propertyDescriptors" : {
+            "Asynchronous Request Expiration" : {
+              "displayName" : "Asynchronous Request Expiration",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Asynchronous Request Expiration",
+              "sensitive" : false
+            },
+            "DatabaseService" : {
+              "displayName" : "Database Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "DatabaseService",
+              "sensitive" : false
+            },
+            "Maximum Outstanding Asynchronous Requests" : {
+              "displayName" : "Maximum Outstanding Asynchronous Requests",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Maximum Outstanding Asynchronous Requests",
+              "sensitive" : false
+            },
+            "Asynchronous Response Expiration" : {
+              "displayName" : "Asynchronous Response Expiration",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Asynchronous Response Expiration",
+              "sensitive" : false
+            },
+            "Maximum Outstanding Synchronous Requests" : {
+              "displayName" : "Maximum Outstanding Synchronous Requests",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Maximum Outstanding Synchronous Requests",
+              "sensitive" : false
+            },
+            "Synchronous Request Expiration" : {
+              "displayName" : "Synchronous Request Expiration",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Synchronous Request Expiration",
+              "sensitive" : false
+            }
+          },
+          "scheduledState" : "DISABLED",
+          "type" : "idol.nifi.service.AciContextServiceImpl"
+        } ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "executionEngine" : "INHERITED",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "285db620-93da-3685-92e1-819ce0a774de",
+          "name" : "Connector Response",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 270.6390380859375,
+            "y" : 323.0000029122968
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "maxConcurrentTasks" : 1,
+        "name" : "Connector ACI",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "e357e0fa-20b3-3666-87a8-ca2bdd8f2a57",
+          "name" : "Connector Request",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : -127.3609619140625,
+            "y" : 324.0000029122968
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        }, {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "58986c8a-04e3-37bc-ad2b-9c7e1b8361ec",
+          "name" : "Connector ACI Success",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 822.5000026751384,
+            "y" : 133.0000029122968
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        }, {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "4326e863-e76d-3711-8f13-c4b64955e920",
+          "name" : "Connector ACI Failure",
+          "portFunction" : "STANDARD",
+          "position" : {
+            "x" : 822.5000026751384,
+            "y" : 217.0000029122968
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "parameterContextName" : "Connector ACI Server Parameters",
+        "position" : {
+          "x" : 605.9999968972533,
+          "y" : 294.9999896946965
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "idol-nifi-framework",
+            "group" : "idol.nifi",
+            "version" : "25.1.0-nifi2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "6f0c9f33-a60e-34b1-a079-e6d36793c3f1",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "HandleAciRequest",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -182.3609619140625,
+            "y" : 131.44851684570312
+          },
+          "properties" : {
+            "ACI Context Service" : "#{ACI Context Service}",
+            "container-queue-size" : "50",
+            "request" : "synchronize|purgedatastore|synchronizegroups|collect|view|insert|delete|hold|releasehold|identifiers|update",
+            "IdolLicenseService" : "#{IDOL License Service}",
+            "sync-actions" : "view",
+            "Listening Port" : "#{Listening Port}",
+            "Max Request Header Size" : "8192"
+          },
+          "propertyDescriptors" : {
+            "container-queue-size" : {
+              "displayName" : "Container Queue Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "container-queue-size",
+              "sensitive" : false
+            },
+            "request" : {
+              "displayName" : "request",
+              "dynamic" : true,
+              "identifiesControllerService" : false,
+              "name" : "request",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "Hostname" : {
+              "displayName" : "Hostname",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Hostname",
+              "sensitive" : false
+            },
+            "sync-actions" : {
+              "displayName" : "Synchronous Actions",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "sync-actions",
+              "sensitive" : false
+            },
+            "Listening Port" : {
+              "displayName" : "Listening Port",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Listening Port",
+              "sensitive" : false
+            },
+            "Multipart Parameters" : {
+              "displayName" : "Multipart Parameters",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Multipart Parameters",
+              "sensitive" : false
+            },
+            "Authorized DN Pattern" : {
+              "displayName" : "Authorized DN Pattern",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Authorized DN Pattern",
+              "sensitive" : false
+            },
+            "Max Request Header Size" : {
+              "displayName" : "Max Request Header Size",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "Max Request Header Size",
+              "sensitive" : false
+            },
+            "get-status-fixed-fields" : {
+              "displayName" : "GetStatus Static Response XML Fields",
+              "dynamic" : false,
+              "identifiesControllerService" : false,
+              "name" : "get-status-fixed-fields",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 0,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "idol.nifi.processor.HandleAciRequest",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "idol-nifi-framework",
+            "group" : "idol.nifi",
+            "version" : "25.1.0-nifi2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "08940548-34b5-3b6e-aa04-48ef42ed7251",
+          "identifier" : "46493ba9-642b-39c3-ae0e-365860d098c3",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "HandleAciResponse",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 215.6390380859375,
+            "y" : 131.44851684570312
+          },
+          "properties" : {
+            "ACI Context Service" : "#{ACI Context Service}"
+          },
+          "propertyDescriptors" : { },
+          "retriedRelationships" : [ ],
+          "retryCount" : 0,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "idol.nifi.processor.HandleAciResponse",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "scheduledState" : "ENABLED",
+        "statelessFlowTimeout" : "1 min"
+      } ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "ERROR",
+        "bundle" : {
+          "artifact" : "idol-nifi-connector-router-nar",
+          "group" : "idol.nifi.connector",
+          "version" : "25.1.0-nifi2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "identifier" : "6a018801-2cf5-3f25-824f-25ffed09161b",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "ConnectorGroupRouter",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 616.0058394798014,
+          "y" : 559.8618900972681
+        },
+        "properties" : { },
+        "propertyDescriptors" : {
+          "DatabaseService" : {
+            "displayName" : "State Database Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "DatabaseService",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 0,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "idol.nifi.connector.router.ConnectorGroupRouter",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    } ],
     "processors" : [ ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
@@ -39,7 +682,32 @@
   },
   "flowEncodingVersion" : "1.0",
   "latest" : false,
-  "parameterContexts" : { },
+  "parameterContexts" : {
+    "Connector ACI Server Parameters" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ ],
+      "name" : "Connector ACI Server Parameters",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "ACI Context Service",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "525bcfe8-6b4b-36ab-9f1d-703f33383d8e"
+      }, {
+        "description" : "",
+        "name" : "IDOL License Service",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "e746ecdb-e6a9-351c-bc5d-33e693fffee0"
+      }, {
+        "description" : "",
+        "name" : "Listening Port",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "10000"
+      } ]
+    }
+  },
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "author" : "vinay.joseph@demo.local",
