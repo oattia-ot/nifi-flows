@@ -1242,7 +1242,22 @@
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
       } ],
-      "labels" : [ ],
+      "labels" : [ {
+        "componentType" : "LABEL",
+        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+        "height" : 150.0,
+        "identifier" : "10e4d7cd-9385-3519-8091-b80f51cf1d02",
+        "label" : "If you are ingesting PDFs in Hebrew,  you must change the value of the PDF logical order.",
+        "position" : {
+          "x" : 168.0,
+          "y" : 184.0
+        },
+        "style" : {
+          "font-size" : "16px"
+        },
+        "width" : 150.0,
+        "zIndex" : 0
+      } ],
       "maxConcurrentTasks" : 1,
       "name" : "KeyView Processing",
       "outputPorts" : [ {
