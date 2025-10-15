@@ -45,6 +45,34 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "groupId" : "59175a1f-84d7-324b-bc24-90d7511daa26",
+        "id" : "ae391a7a-ab45-311e-afed-57c57eb48a42",
+        "name" : "Incoming",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2ae6cceb-a2e6-3164-a767-17aec663184b",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "id" : "30a719e0-9995-3d91-8087-b01e9bce216e",
+        "name" : "Outgoing",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
         "id" : "3e312a04-67f1-355b-8104-27251582f678",
         "name" : "Incoming",
@@ -86,8 +114,8 @@
       "identifier" : "1b314fbd-457c-376d-93f1-23213684984d",
       "label" : "Designing this for Web Ingestion.",
       "position" : {
-        "x" : 196.49993896484375,
-        "y" : -30.389141082763672
+        "x" : 96.0,
+        "y" : -64.0
       },
       "style" : {
         "font-size" : "12px"
@@ -1682,6 +1710,65 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "30a719e0-9995-3d91-8087-b01e9bce216e",
+          "name" : "Outgoing",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "cf59eb2e-627f-34ed-8444-79620ecb8364",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
+          "name" : "Funnel",
+          "type" : "FUNNEL"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "7f3fc8ed-0e6a-36de-a902-1389a4ad7b39",
+          "name" : "Funnel",
+          "type" : "FUNNEL"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "b0bf6eb0-e88d-39a9-b847-a81dee1f3a7a",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
+          "name" : "Vectorize",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "comments" : "",
           "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
           "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
@@ -1703,6 +1790,36 @@
           "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
           "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
           "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
+          "name" : "Funnel",
+          "type" : "FUNNEL"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "4386c0a1-f5cc-3269-a0a3-6f682d79bf76",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
+          "name" : "Vectorize",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -1747,10 +1864,26 @@
       "funnels" : [ {
         "componentType" : "FUNNEL",
         "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "7f3fc8ed-0e6a-36de-a902-1389a4ad7b39",
+        "position" : {
+          "x" : 352.0,
+          "y" : -40.0
+        }
+      }, {
+        "componentType" : "FUNNEL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
         "identifier" : "4b1f057e-da18-348c-af8f-f26fe89545bf",
         "position" : {
           "x" : -696.0,
           "y" : 120.0
+        }
+      }, {
+        "componentType" : "FUNNEL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
+        "position" : {
+          "x" : 352.0,
+          "y" : 288.0
         }
       } ],
       "groupIdentifier" : "flow-contents-group",
@@ -1770,7 +1903,22 @@
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
       } ],
-      "labels" : [ ],
+      "labels" : [ {
+        "componentType" : "LABEL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "height" : 80.0,
+        "identifier" : "0a5f5dae-2fbf-3728-91d5-841536114062",
+        "label" : "Change the value in the update attribute if you do not want to vectorize.",
+        "position" : {
+          "x" : -24.0,
+          "y" : -104.0
+        },
+        "style" : {
+          "font-size" : "12px"
+        },
+        "width" : 184.0,
+        "zIndex" : 0
+      } ],
       "maxConcurrentTasks" : 1,
       "name" : "Vectorization",
       "outputPorts" : [ {
@@ -1790,7 +1938,7 @@
       } ],
       "parameterContextName" : "Custom Lua Parameter Context",
       "position" : {
-        "x" : 360.0,
+        "x" : 356.0,
         "y" : 136.0
       },
       "processGroups" : [ ],
@@ -2036,6 +2184,49 @@
         "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "5 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "59175a1f-84d7-324b-bc24-90d7511daa26",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "59175a1f-84d7-324b-bc24-90d7511daa26",
+        "identifier" : "ae391a7a-ab45-311e-afed-57c57eb48a42",
+        "name" : "Incoming",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -413.5,
+          "y" : -175.3891716003418
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Insert into Knowledge Discovery",
+      "outputPorts" : [ ],
+      "parameterContextName" : "Custom Lua Parameter Context",
+      "position" : {
+        "x" : 356.0,
+        "y" : -128.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
