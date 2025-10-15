@@ -39,6 +39,34 @@
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "id" : "3e312a04-67f1-355b-8104-27251582f678",
+        "name" : "Incoming",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "87089fb8-2c7d-31fc-bfc8-6d4a780e05ce",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+        "id" : "12df15b2-291f-3d0e-bc52-db28bea3ef39",
+        "name" : "Outgoing",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 0
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "5 GB",
@@ -1552,6 +1580,460 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "idol.nifi.processor.KeyViewFilterDocument",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "30a719e0-9995-3d91-8087-b01e9bce216e",
+          "name" : "Outgoing",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "c0dbd7b2-cc1e-30c9-8e58-80aa95a91ca8",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Do Not Vectorize" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "416d0aec-a4b7-3835-8233-7b6966f6929b",
+          "name" : "Do you want to vectorize",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "39e8612f-a193-313b-9bfa-16dda3796ed6",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "3e312a04-67f1-355b-8104-27251582f678",
+          "name" : "Incoming",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "4b1f057e-da18-348c-af8f-f26fe89545bf",
+          "name" : "Funnel",
+          "type" : "FUNNEL"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "a853dd6b-a6d6-344b-9b90-6638aeba6c54",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "unmatched" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
+          "name" : "Vectorize",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "50ef7dfa-2861-3c60-85ff-9bc1d6e7302e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Vectorize" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+          "name" : "RouteOnAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "fb8449ce-6c13-329e-a239-f3a2524346c7",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "416d0aec-a4b7-3835-8233-7b6966f6929b",
+          "name" : "Do you want to vectorize",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "5 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ {
+        "componentType" : "FUNNEL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "4b1f057e-da18-348c-af8f-f26fe89545bf",
+        "position" : {
+          "x" : -696.0,
+          "y" : 120.0
+        }
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "3e312a04-67f1-355b-8104-27251582f678",
+        "name" : "Incoming",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -328.0,
+          "y" : -200.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "Vectorization",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "30a719e0-9995-3d91-8087-b01e9bce216e",
+        "name" : "Outgoing",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -328.0,
+          "y" : 288.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "Custom Lua Parameter Context",
+      "position" : {
+        "x" : 360.0,
+        "y" : 136.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.2.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "RouteOnAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -384.0,
+          "y" : 80.0
+        },
+        "properties" : {
+          "Vectorize" : "${vectorize:equals('true')}",
+          "Do Not Vectorize" : "${vectorize:equals('false')}",
+          "Routing Strategy" : "Route to Property name"
+        },
+        "propertyDescriptors" : {
+          "Vectorize" : {
+            "displayName" : "Vectorize",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Vectorize",
+            "sensitive" : false
+          },
+          "Do Not Vectorize" : {
+            "displayName" : "Do Not Vectorize",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Do Not Vectorize",
+            "sensitive" : false
+          },
+          "Routing Strategy" : {
+            "displayName" : "Routing Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Routing Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "ERROR",
+        "bundle" : {
+          "artifact" : "idol-nifi-framework",
+          "group" : "idol.nifi",
+          "version" : "25.1.0-nifi2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Vectorize",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 200.0,
+          "y" : 80.0
+        },
+        "properties" : {
+          "LuaScriptFunctionArguments" : "LuaDocument",
+          "EnableDebugger" : "false",
+          "RouteTo" : "success",
+          "LuaScriptFunction" : "handler"
+        },
+        "propertyDescriptors" : {
+          "LuaScriptFunctionArguments" : {
+            "displayName" : "Lua script function arguments",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LuaScriptFunctionArguments",
+            "sensitive" : false
+          },
+          "AdditionalOutputRelationships" : {
+            "displayName" : "Additional output relationships",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "AdditionalOutputRelationships",
+            "sensitive" : false
+          },
+          "LuaScriptFile" : {
+            "displayName" : "Lua script file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LuaScriptFile",
+            "sensitive" : false
+          },
+          "RouteUntransferredTo" : {
+            "displayName" : "Route untransferred to",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RouteUntransferredTo",
+            "sensitive" : false
+          },
+          "DocumentRegistryService" : {
+            "displayName" : "Document Registry Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "DocumentRegistryService",
+            "sensitive" : false
+          },
+          "RouteReturnedTo" : {
+            "displayName" : "Route returned to",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RouteReturnedTo",
+            "sensitive" : false
+          },
+          "EnableDebugger" : {
+            "displayName" : "Enable Debugger",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "EnableDebugger",
+            "sensitive" : false
+          },
+          "IdolLicenseService" : {
+            "displayName" : "Idol License Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "IdolLicenseService",
+            "sensitive" : false
+          },
+          "RouteTo" : {
+            "displayName" : "Route to",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RouteTo",
+            "sensitive" : false
+          },
+          "LuaScriptFunction" : {
+            "displayName" : "Lua script function",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LuaScriptFunction",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "idol.nifi.processor.ExecuteDocumentLua",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.2.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "416d0aec-a4b7-3835-8233-7b6966f6929b",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "Do you want to vectorize",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -384.0,
+          "y" : -104.0
+        },
+        "properties" : {
+          "Vectorize" : "False",
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Vectorize" : {
+            "displayName" : "Vectorize",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "Vectorize",
+            "sensitive" : false
+          },
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
