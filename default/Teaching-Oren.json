@@ -96,7 +96,171 @@
       },
       "zIndex" : 0
     } ],
-    "controllerServices" : [ ],
+    "controllerServices" : [ {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.3.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.3.0-nifi2"
+        },
+        "type" : "idol.nifi.service.AciContextService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "03b78da0-4484-3de0-a1a8-fef412382f6e",
+      "name" : "AciContextServiceImpl",
+      "properties" : {
+        "Asynchronous Request Expiration" : "1 day",
+        "Maximum Outstanding Asynchronous Requests" : "5000",
+        "Asynchronous Response Expiration" : "30 days",
+        "Maximum Outstanding Synchronous Requests" : "500",
+        "Synchronous Request Expiration" : "5 min"
+      },
+      "propertyDescriptors" : {
+        "Asynchronous Request Expiration" : {
+          "displayName" : "Asynchronous Request Expiration",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Asynchronous Request Expiration",
+          "sensitive" : false
+        },
+        "DatabaseService" : {
+          "displayName" : "Database Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "DatabaseService",
+          "sensitive" : false
+        },
+        "Maximum Outstanding Asynchronous Requests" : {
+          "displayName" : "Maximum Outstanding Asynchronous Requests",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Outstanding Asynchronous Requests",
+          "sensitive" : false
+        },
+        "Asynchronous Response Expiration" : {
+          "displayName" : "Asynchronous Response Expiration",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Asynchronous Response Expiration",
+          "sensitive" : false
+        },
+        "Maximum Outstanding Synchronous Requests" : {
+          "displayName" : "Maximum Outstanding Synchronous Requests",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Maximum Outstanding Synchronous Requests",
+          "sensitive" : false
+        },
+        "Synchronous Request Expiration" : {
+          "displayName" : "Synchronous Request Expiration",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Synchronous Request Expiration",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.AciContextServiceImpl"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.3.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.3.0-nifi2"
+        },
+        "type" : "idol.nifi.service.IdolLicenseService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
+      "name" : "IdolLicenseServiceImpl",
+      "properties" : {
+        "LicenseServerHost" : "licenseserver",
+        "LicenseServerPort" : "20000"
+      },
+      "propertyDescriptors" : {
+        "SSLConfigService" : {
+          "displayName" : "SSL Config Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSLConfigService",
+          "sensitive" : false
+        },
+        "LicenseServerHost" : {
+          "displayName" : "License Server Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerHost",
+          "sensitive" : false
+        },
+        "LicenseServerPort" : {
+          "displayName" : "License Server Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerPort",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.IdolLicenseServiceImpl"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.3.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.3.0-nifi2"
+        },
+        "type" : "idol.nifi.service.KeyViewFilterService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "21cb8279-dd13-37a6-bf8c-d2b2afeacdf4",
+      "name" : "KeyViewFilterServiceImpl",
+      "properties" : {
+        "FileStorageDirectory" : "${idol.repository.files.storage.dir}",
+        "KeyViewDirectory" : "${idol.repository.resources.dir}/KeyViewSDK"
+      },
+      "propertyDescriptors" : {
+        "FileStorageDirectory" : {
+          "displayName" : "File storage directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FileStorageDirectory",
+          "sensitive" : false
+        },
+        "KeyViewDirectory" : {
+          "displayName" : "KeyView directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "KeyViewDirectory",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.KeyViewFilterServiceImpl"
+    } ],
     "defaultBackPressureDataSizeThreshold" : "5 GB",
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
@@ -519,14 +683,14 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
+            "version" : "25.3.0-nifi2"
           },
           "componentType" : "CONTROLLER_SERVICE",
           "controllerServiceApis" : [ {
             "bundle" : {
               "artifact" : "idol-nifi-framework-api",
               "group" : "idol.nifi",
-              "version" : "25.1.0-nifi2"
+              "version" : "25.3.0-nifi2"
             },
             "type" : "idol.nifi.service.AciContextService"
           } ],
@@ -670,7 +834,7 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
+            "version" : "25.3.0-nifi2"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -705,7 +869,7 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
+            "version" : "25.3.0-nifi2"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -822,7 +986,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-connector-router-nar",
           "group" : "idol.nifi.connector",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1080,184 +1244,7 @@
         },
         "zIndex" : 0
       } ],
-      "controllerServices" : [ {
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "idol-nifi-framework",
-          "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
-        },
-        "comments" : "",
-        "componentType" : "CONTROLLER_SERVICE",
-        "controllerServiceApis" : [ {
-          "bundle" : {
-            "artifact" : "idol-nifi-framework-api",
-            "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
-          },
-          "type" : "idol.nifi.service.IdolSslConfigService"
-        } ],
-        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "identifier" : "6a62c753-201b-33f5-90bd-23f9841cb278",
-        "name" : "IdolSslConfigServiceImpl",
-        "properties" : {
-          "CheckCommonName" : "true",
-          "CheckCertificate" : "true",
-          "Method" : "Negotiate"
-        },
-        "propertyDescriptors" : {
-          "CheckCommonName" : {
-            "displayName" : "Check common name",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "CheckCommonName",
-            "sensitive" : false
-          },
-          "Private key" : {
-            "displayName" : "Private key",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Private key",
-            "sensitive" : true
-          },
-          "CipherSuite" : {
-            "displayName" : "Cipher suite",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "CipherSuite",
-            "sensitive" : false
-          },
-          "Private key password" : {
-            "displayName" : "Private key password",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Private key password",
-            "sensitive" : true
-          },
-          "CheckCertificate" : {
-            "displayName" : "Check certificate",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "CheckCertificate",
-            "sensitive" : false
-          },
-          "Method" : {
-            "displayName" : "Method",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Method",
-            "sensitive" : false
-          },
-          "AuthorityCertificates" : {
-            "displayName" : "Authority certificates",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "AuthorityCertificates",
-            "sensitive" : false
-          },
-          "Certificate" : {
-            "displayName" : "Certificate",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Certificate",
-            "sensitive" : false
-          }
-        },
-        "scheduledState" : "DISABLED",
-        "type" : "idol.nifi.service.IdolSslConfigServiceImpl"
-      }, {
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "idol-nifi-framework",
-          "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
-        },
-        "comments" : "",
-        "componentType" : "CONTROLLER_SERVICE",
-        "controllerServiceApis" : [ {
-          "bundle" : {
-            "artifact" : "idol-nifi-framework-api",
-            "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
-          },
-          "type" : "idol.nifi.service.IdolLicenseService"
-        } ],
-        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "identifier" : "3a97a7ae-6d74-377d-b712-bbe84708fa31",
-        "name" : "IdolLicenseServiceImpl",
-        "properties" : {
-          "SSLConfigService" : "6a62c753-201b-33f5-90bd-23f9841cb278",
-          "LicenseServerHost" : "eecmidollicense.idoldemos.net",
-          "LicenseServerPort" : "20000"
-        },
-        "propertyDescriptors" : {
-          "SSLConfigService" : {
-            "displayName" : "SSL Config Service",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "SSLConfigService",
-            "sensitive" : false
-          },
-          "LicenseServerHost" : {
-            "displayName" : "License Server Hostname",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "LicenseServerHost",
-            "sensitive" : false
-          },
-          "LicenseServerPort" : {
-            "displayName" : "License Server Port",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "LicenseServerPort",
-            "sensitive" : false
-          }
-        },
-        "scheduledState" : "DISABLED",
-        "type" : "idol.nifi.service.IdolLicenseServiceImpl"
-      }, {
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "idol-nifi-framework",
-          "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
-        },
-        "comments" : "",
-        "componentType" : "CONTROLLER_SERVICE",
-        "controllerServiceApis" : [ {
-          "bundle" : {
-            "artifact" : "idol-nifi-framework-api",
-            "group" : "idol.nifi",
-            "version" : "25.1.0-nifi2"
-          },
-          "type" : "idol.nifi.service.KeyViewFilterService"
-        } ],
-        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "identifier" : "2e125eaf-a60e-36d4-b51a-37243a28386c",
-        "name" : "KeyViewFilterServiceImpl",
-        "properties" : {
-          "FileStorageDirectory" : "${idol.repository.files.storage.dir}",
-          "KeyViewDirectory" : "${idol.repository.resources.dir}/KeyViewSDK"
-        },
-        "propertyDescriptors" : {
-          "FileStorageDirectory" : {
-            "displayName" : "File storage directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "FileStorageDirectory",
-            "sensitive" : false
-          },
-          "KeyViewDirectory" : {
-            "displayName" : "KeyView directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "KeyViewDirectory",
-            "sensitive" : false
-          }
-        },
-        "scheduledState" : "DISABLED",
-        "type" : "idol.nifi.service.KeyViewFilterServiceImpl"
-      } ],
+      "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "5 GB",
       "defaultBackPressureObjectThreshold" : 10000,
       "defaultFlowFileExpiration" : "0 sec",
@@ -1357,7 +1344,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1373,12 +1360,12 @@
           "y" : 0.0
         },
         "properties" : {
-          "KeyViewFilterService" : "2e125eaf-a60e-36d4-b51a-37243a28386c",
+          "KeyViewFilterService" : "21cb8279-dd13-37a6-bf8c-d2b2afeacdf4",
           "UseLocalTempFile" : "false",
           "ExtractedFilePartType" : "match_input",
           "MergeMails" : "false",
           "InheritedFieldsRegex" : ".*",
-          "IdolLicenseService" : "3a97a7ae-6d74-377d-b712-bbe84708fa31",
+          "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
           "ExtractNewFlowFiles" : "true",
           "NotInheritedFieldsRegex" : ""
         },
@@ -1463,7 +1450,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1479,12 +1466,12 @@
           "y" : 192.0
         },
         "properties" : {
-          "KeyViewFilterService" : "2e125eaf-a60e-36d4-b51a-37243a28386c",
+          "KeyViewFilterService" : "21cb8279-dd13-37a6-bf8c-d2b2afeacdf4",
           "UseLocalTempFile" : "false",
           "HiddenTintedText" : "false",
           "FilteredMetadataTarget" : "original_field",
           "OutputTableInfo" : "false",
-          "IdolLicenseService" : "3a97a7ae-6d74-377d-b712-bbe84708fa31",
+          "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
           "ExtractFileMetadata" : "true",
           "ExtractContentText" : "true",
           "RevisionMarks" : "false",
@@ -1680,6 +1667,35 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "30a719e0-9995-3d91-8087-b01e9bce216e",
+          "name" : "Outgoing",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "cf59eb2e-627f-34ed-8444-79620ecb8364",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
+          "name" : "Funnel",
+          "type" : "FUNNEL"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "comments" : "",
           "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
           "id" : "4b1f057e-da18-348c-af8f-f26fe89545bf",
@@ -1702,35 +1718,6 @@
           "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
           "name" : "RouteOnAttribute",
           "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "5 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-          "id" : "30a719e0-9995-3d91-8087-b01e9bce216e",
-          "name" : "Outgoing",
-          "type" : "OUTPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-        "identifier" : "cf59eb2e-627f-34ed-8444-79620ecb8364",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-          "id" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
-          "name" : "Funnel",
-          "type" : "FUNNEL"
         },
         "zIndex" : 0
       }, {
@@ -1949,7 +1936,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.3.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2008,7 +1995,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2118,7 +2105,7 @@
         "bundle" : {
           "artifact" : "nifi-update-attribute-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.3.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2331,7 +2318,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2410,7 +2397,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.1.0-nifi2"
+          "version" : "25.3.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2623,13 +2610,13 @@
         "name" : "ACI Context Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "525bcfe8-6b4b-36ab-9f1d-703f33383d8e"
+        "value" : "03b78da0-4484-3de0-a1a8-fef412382f6e"
       }, {
         "description" : "",
         "name" : "IDOL License Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "e746ecdb-e6a9-351c-bc5d-33e693fffee0"
+        "value" : "310c538f-3b5e-3c23-ae0c-e8b22766e907"
       }, {
         "description" : "",
         "name" : "Listening Port",
@@ -2641,7 +2628,7 @@
   },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "vinay.joseph@demo.local",
+    "author" : "admin",
     "flowIdentifier" : "Teaching-Oren",
     "timestamp" : 0
   }
