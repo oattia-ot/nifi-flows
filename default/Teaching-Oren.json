@@ -101,7 +101,7 @@
       "bundle" : {
         "artifact" : "idol-nifi-framework",
         "group" : "idol.nifi",
-        "version" : "25.3.0-nifi2"
+        "version" : "25.1.0-nifi2"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -109,7 +109,56 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework-api",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
+        },
+        "type" : "idol.nifi.service.IdolLicenseService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
+      "name" : "IdolLicenseServiceImpl",
+      "properties" : {
+        "LicenseServerHost" : "licenseserver",
+        "LicenseServerPort" : "20000"
+      },
+      "propertyDescriptors" : {
+        "SSLConfigService" : {
+          "displayName" : "SSL Config Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSLConfigService",
+          "sensitive" : false
+        },
+        "LicenseServerHost" : {
+          "displayName" : "License Server Hostname",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerHost",
+          "sensitive" : false
+        },
+        "LicenseServerPort" : {
+          "displayName" : "License Server Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "LicenseServerPort",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.IdolLicenseServiceImpl"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.1.0-nifi2"
         },
         "type" : "idol.nifi.service.AciContextService"
       } ],
@@ -174,7 +223,7 @@
       "bundle" : {
         "artifact" : "idol-nifi-framework",
         "group" : "idol.nifi",
-        "version" : "25.3.0-nifi2"
+        "version" : "25.1.0-nifi2"
       },
       "comments" : "",
       "componentType" : "CONTROLLER_SERVICE",
@@ -182,56 +231,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework-api",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
-        },
-        "type" : "idol.nifi.service.IdolLicenseService"
-      } ],
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
-      "name" : "IdolLicenseServiceImpl",
-      "properties" : {
-        "LicenseServerHost" : "licenseserver",
-        "LicenseServerPort" : "20000"
-      },
-      "propertyDescriptors" : {
-        "SSLConfigService" : {
-          "displayName" : "SSL Config Service",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "SSLConfigService",
-          "sensitive" : false
-        },
-        "LicenseServerHost" : {
-          "displayName" : "License Server Hostname",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "LicenseServerHost",
-          "sensitive" : false
-        },
-        "LicenseServerPort" : {
-          "displayName" : "License Server Port",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "LicenseServerPort",
-          "sensitive" : false
-        }
-      },
-      "scheduledState" : "DISABLED",
-      "type" : "idol.nifi.service.IdolLicenseServiceImpl"
-    }, {
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "idol-nifi-framework",
-        "group" : "idol.nifi",
-        "version" : "25.3.0-nifi2"
-      },
-      "comments" : "",
-      "componentType" : "CONTROLLER_SERVICE",
-      "controllerServiceApis" : [ {
-        "bundle" : {
-          "artifact" : "idol-nifi-framework-api",
-          "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "type" : "idol.nifi.service.KeyViewFilterService"
       } ],
@@ -274,21 +274,6 @@
     "labels" : [ {
       "componentType" : "LABEL",
       "groupIdentifier" : "flow-contents-group",
-      "height" : 48.0,
-      "identifier" : "1b314fbd-457c-376d-93f1-23213684984d",
-      "label" : "Designing this for Web Ingestion.",
-      "position" : {
-        "x" : 96.0,
-        "y" : -64.0
-      },
-      "style" : {
-        "font-size" : "12px"
-      },
-      "width" : 160.0,
-      "zIndex" : 0
-    }, {
-      "componentType" : "LABEL",
-      "groupIdentifier" : "flow-contents-group",
       "height" : 150.0,
       "identifier" : "f2c1ec88-b00e-30f3-a922-ba644c618b73",
       "label" : "Test",
@@ -301,10 +286,39 @@
       },
       "width" : 150.0,
       "zIndex" : 0
+    }, {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 48.0,
+      "identifier" : "1b314fbd-457c-376d-93f1-23213684984d",
+      "label" : "Designing this for Web Ingestion.",
+      "position" : {
+        "x" : 96.0,
+        "y" : -64.0
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 160.0,
+      "zIndex" : 0
     } ],
     "maxConcurrentTasks" : 1,
     "name" : "Teaching Oren",
-    "outputPorts" : [ ],
+    "outputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "39e46e54-c198-34e0-b79f-9de14f3081d6",
+      "name" : "Failed.",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -744.0,
+        "y" : -88.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    } ],
     "parameterContextName" : "Custom Lua Parameter Context",
     "position" : {
       "x" : 0.0,
@@ -583,20 +597,20 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "groupId" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-            "id" : "5c582de4-e73f-368a-870f-84dc7242f48d",
-            "name" : "Connector ACI Success",
+            "id" : "ca3656d1-daca-3a1a-9726-974dc96340e6",
+            "name" : "Connector ACI Failure",
             "type" : "OUTPUT_PORT"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-          "identifier" : "8a0c17ca-3df7-31a7-8e9e-a3a79c138bc0",
+          "identifier" : "9cce540e-1b34-3e31-a3ff-fc16ef8d6a0a",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
+          "selectedRelationships" : [ "failure" ],
           "source" : {
             "comments" : "",
             "groupId" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
@@ -612,20 +626,20 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "groupId" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-            "id" : "ca3656d1-daca-3a1a-9726-974dc96340e6",
-            "name" : "Connector ACI Failure",
+            "id" : "5c582de4-e73f-368a-870f-84dc7242f48d",
+            "name" : "Connector ACI Success",
             "type" : "OUTPUT_PORT"
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-          "identifier" : "9cce540e-1b34-3e31-a3ff-fc16ef8d6a0a",
+          "identifier" : "8a0c17ca-3df7-31a7-8e9e-a3a79c138bc0",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
           "name" : "",
           "partitioningAttribute" : "",
           "prioritizers" : [ ],
-          "selectedRelationships" : [ "failure" ],
+          "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
             "groupId" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
@@ -698,14 +712,14 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.3.0-nifi2"
+            "version" : "25.1.0-nifi2"
           },
           "componentType" : "CONTROLLER_SERVICE",
           "controllerServiceApis" : [ {
             "bundle" : {
               "artifact" : "idol-nifi-framework-api",
               "group" : "idol.nifi",
-              "version" : "25.3.0-nifi2"
+              "version" : "25.1.0-nifi2"
             },
             "type" : "idol.nifi.service.AciContextService"
           } ],
@@ -798,12 +812,12 @@
           "componentType" : "OUTPUT_PORT",
           "concurrentlySchedulableTaskCount" : 1,
           "groupIdentifier" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-          "identifier" : "5c582de4-e73f-368a-870f-84dc7242f48d",
-          "name" : "Connector ACI Success",
+          "identifier" : "83c75c56-87ce-3090-a014-32ba585d25cc",
+          "name" : "Connector Request",
           "portFunction" : "STANDARD",
           "position" : {
-            "x" : 822.5000026751384,
-            "y" : 133.0000029122968
+            "x" : -127.3609619140625,
+            "y" : 324.0000029122968
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -812,12 +826,12 @@
           "componentType" : "OUTPUT_PORT",
           "concurrentlySchedulableTaskCount" : 1,
           "groupIdentifier" : "d1b87a1b-7d80-3bc2-83d3-cd3a59b349ec",
-          "identifier" : "83c75c56-87ce-3090-a014-32ba585d25cc",
-          "name" : "Connector Request",
+          "identifier" : "5c582de4-e73f-368a-870f-84dc7242f48d",
+          "name" : "Connector ACI Success",
           "portFunction" : "STANDARD",
           "position" : {
-            "x" : -127.3609619140625,
-            "y" : 324.0000029122968
+            "x" : 822.5000026751384,
+            "y" : 133.0000029122968
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -849,7 +863,7 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.3.0-nifi2"
+            "version" : "25.1.0-nifi2"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -884,7 +898,7 @@
           "bundle" : {
             "artifact" : "idol-nifi-framework",
             "group" : "idol.nifi",
-            "version" : "25.3.0-nifi2"
+            "version" : "25.1.0-nifi2"
           },
           "comments" : "",
           "componentType" : "PROCESSOR",
@@ -1001,7 +1015,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-connector-router-nar",
           "group" : "idol.nifi.connector",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1087,6 +1101,35 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+          "id" : "12df15b2-291f-3d0e-bc52-db28bea3ef39",
+          "name" : "Outgoing",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+        "identifier" : "5cf7b399-6821-39ce-8a7c-77dc559fcb08",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+          "id" : "3f337ad6-0421-3b6f-94e2-a29adc787c4f",
+          "name" : "KeyViewFilterDocument",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "comments" : "",
           "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
           "id" : "8f80fd5a-888d-3f0b-ad4c-0cd2b227db40",
@@ -1109,35 +1152,6 @@
           "id" : "99d1b13f-9121-36f0-9bb5-940d339ea9e7",
           "name" : "Funnel",
           "type" : "FUNNEL"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "5 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-          "id" : "12df15b2-291f-3d0e-bc52-db28bea3ef39",
-          "name" : "Outgoing",
-          "type" : "OUTPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "identifier" : "5cf7b399-6821-39ce-8a7c-77dc559fcb08",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-          "id" : "3f337ad6-0421-3b6f-94e2-a29adc787c4f",
-          "name" : "KeyViewFilterDocument",
-          "type" : "PROCESSOR"
         },
         "zIndex" : 0
       }, {
@@ -1359,7 +1373,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1465,7 +1479,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1951,7 +1965,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.3.0"
+          "version" : "2.2.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2010,7 +2024,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2120,7 +2134,7 @@
         "bundle" : {
           "artifact" : "nifi-update-attribute-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.3.0"
+          "version" : "2.2.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2333,7 +2347,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2412,7 +2426,7 @@
         "bundle" : {
           "artifact" : "idol-nifi-framework",
           "group" : "idol.nifi",
-          "version" : "25.3.0-nifi2"
+          "version" : "25.1.0-nifi2"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -2625,13 +2639,13 @@
         "name" : "ACI Context Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "02080ddd-d865-3851-b1d4-2fbdfac0bb02"
+        "value" : "525bcfe8-6b4b-36ab-9f1d-703f33383d8e"
       }, {
         "description" : "",
         "name" : "IDOL License Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "22ac1324-bee4-3aca-a6d9-0dc06326cff8"
+        "value" : "e746ecdb-e6a9-351c-bc5d-33e693fffee0"
       }, {
         "description" : "",
         "name" : "Listening Port",
@@ -2643,7 +2657,7 @@
   },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "admin",
+    "author" : "vinay.joseph@demo.local",
     "flowIdentifier" : "Teaching-Oren",
     "timestamp" : 0
   }
