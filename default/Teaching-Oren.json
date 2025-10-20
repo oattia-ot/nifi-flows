@@ -1,5 +1,10 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "80392701-aa43-3214-8eed-8413db0501f4" : {
+      "identifier" : "80392701-aa43-3214-8eed-8413db0501f4",
+      "name" : "IdolSslConfigServiceImpl"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1760392928047,
     "description" : "Baseline",
@@ -291,7 +296,8 @@
       "identifier" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
       "name" : "IdolLicenseServiceImpl",
       "properties" : {
-        "LicenseServerHost" : "licenseserver",
+        "SSLConfigService" : "80392701-aa43-3214-8eed-8413db0501f4",
+        "LicenseServerHost" : "eecmidollicense.idoldemos.net",
         "LicenseServerPort" : "20000"
       },
       "propertyDescriptors" : {
@@ -324,7 +330,12 @@
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "80392701-aa43-3214-8eed-8413db0501f4" : {
+        "identifier" : "80392701-aa43-3214-8eed-8413db0501f4",
+        "name" : "IdolSslConfigServiceImpl"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ ],
@@ -1637,8 +1648,8 @@
         "name" : "Synchronize Output",
         "portFunction" : "STANDARD",
         "position" : {
-          "x" : 1680.0,
-          "y" : 31.0
+          "x" : 1696.0,
+          "y" : -144.0
         },
         "scheduledState" : "ENABLED",
         "type" : "OUTPUT_PORT"
@@ -1718,7 +1729,7 @@
         "type" : "idol.nifi.connector.router.ConnectorRouter",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ ],
+        "autoTerminatedRelationships" : [ "report" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "ERROR",
         "bundle" : {
@@ -1750,17 +1761,20 @@
           "IgnoreRobotProtocolErrors" : "false",
           "PageTimeout" : "120s",
           "MetadataIncludeMetaTags" : "true",
-          "ClippingMode" : "NONE",
+          "ClippingMode" : "READABILITY",
           "ViewportHeight" : "1080",
           "ReadabilityFailOnError" : "false",
           "RenditionImageFormat" : "jpeg",
+          "META:DREDBNAME" : "YNET",
           "StripFragmentIdentifiers" : "true",
           "RemoveNoframes" : "false",
           "FollowRobotProtocol" : "true",
           "ProcessShadowDOMs" : "true",
           "FailOnScriptTimeout" : "false",
           "RemoveNoScripts" : "false",
+          "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
           "MetadataIncludeTextPositions" : "false",
+          "Url" : "https://en.wikipedia.org/wiki/Main_Page",
           "CssUnselectOnFailure" : "SelectNone",
           "MaxPageSize" : "100000000",
           "RssXSLFilePath" : "${idol.repository.resources.dir}/RSSTransform.xsl",
@@ -1768,6 +1782,7 @@
           "DeleteOnServerError" : "false",
           "CleanCookieJar" : "false",
           "StayOnSite" : "true",
+          "SpiderUrlCantHaveRegex" : ".*\\.css$|.*.css\\?.*$|.*\\.js$|.*\\.js,.*$|.*.js\\?.*",
           "RemoveScripts" : "false",
           "PageDateMetadataFormat" : "YYYY-SHORTMONTH-DD HH:NN:SS ZZZ",
           "MaxDepth" : "-1",
@@ -1804,9 +1819,10 @@
           "IgnoreSitemapScopeErrors" : "false",
           "SiteDuration" : "0s",
           "EnableJavascriptConsoleLogging" : "false",
-          "UserAgent" : "Autn-WKOOP",
+          "UserAgent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
           "NormalizeWhitespace" : "false",
           "FullPageRender" : "true",
+          "ContentTypeCantHaveRegex" : "(application|text)/(javascript|xml|x-javascript|css)(;.*)?",
           "CreateImageRendition" : "false",
           "ThumbnailRenditionWidth" : "400",
           "MaxRedirects" : "25",
@@ -2040,6 +2056,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "GoogleNewsQueryDomains",
+            "sensitive" : false
+          },
+          "META:DREDBNAME" : {
+            "displayName" : "META:DREDBNAME",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "META:DREDBNAME",
             "sensitive" : false
           },
           "PageMustHaveRegex" : {
@@ -2918,7 +2941,7 @@
         "name" : "ViewWeb",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : 1032.0,
+          "x" : 1040.0,
           "y" : 80.0
         },
         "properties" : {
@@ -5007,6 +5030,6 @@
   "snapshotMetadata" : {
     "author" : "vinay.joseph@demo.local",
     "flowIdentifier" : "Teaching-Oren",
-    "timestamp" : 1760939105554
+    "timestamp" : 1760940954953
   }
 }
