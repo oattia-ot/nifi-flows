@@ -45,6 +45,34 @@
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
+        "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+        "id" : "d05ab9d7-5df5-324a-a779-ca40330483d6",
+        "name" : "Incoming",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "5ca0606e-f069-3125-bad3-e65c57ea20fb",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "id" : "40693666-d50e-4e5d-0000-000000000000",
+        "name" : "Synchronize Output",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 2
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
         "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
         "id" : "3e312a04-67f1-355b-8104-27251582f678",
         "name" : "Incoming",
@@ -70,12 +98,43 @@
     }, {
       "backPressureDataSizeThreshold" : "5 GB",
       "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : -476.0,
+        "y" : -107.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "d94258f2-2140-33be-a343-bc72ddec4bda",
+        "id" : "3aac42bf-d11c-33ce-bf3b-87f580c80c09",
+        "name" : "Response from Web Connector",
+        "type" : "INPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8a941fa4-19ff-39d7-8032-436c16e4e7e6",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "id" : "91b30abd-34ba-42a7-0000-000000000000",
+        "name" : "Response",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
-        "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "id" : "d05ab9d7-5df5-324a-a779-ca40330483d6",
-        "name" : "Incoming",
+        "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "id" : "9babd9c4-b639-4e4c-0000-000000000000",
+        "name" : "Request",
         "type" : "INPUT_PORT"
       },
       "flowFileExpiration" : "0 sec",
@@ -286,39 +345,10 @@
       },
       "width" : 160.0,
       "zIndex" : 0
-    }, {
-      "componentType" : "LABEL",
-      "groupIdentifier" : "flow-contents-group",
-      "height" : 150.0,
-      "identifier" : "f2c1ec88-b00e-30f3-a922-ba644c618b73",
-      "label" : "Test",
-      "position" : {
-        "x" : -112.0,
-        "y" : -336.0
-      },
-      "style" : {
-        "font-size" : "12px"
-      },
-      "width" : 150.0,
-      "zIndex" : 0
     } ],
     "maxConcurrentTasks" : 1,
     "name" : "Teaching Oren",
-    "outputPorts" : [ {
-      "allowRemoteAccess" : false,
-      "componentType" : "OUTPUT_PORT",
-      "concurrentlySchedulableTaskCount" : 1,
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "39e46e54-c198-34e0-b79f-9de14f3081d6",
-      "name" : "Failed.",
-      "portFunction" : "STANDARD",
-      "position" : {
-        "x" : -744.0,
-        "y" : -64.0
-      },
-      "scheduledState" : "ENABLED",
-      "type" : "OUTPUT_PORT"
-    } ],
+    "outputPorts" : [ ],
     "parameterContextName" : "Custom Lua Parameter Context",
     "position" : {
       "x" : 0.0,
@@ -1305,6 +1335,2299 @@
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
     }, {
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "40693666-d50e-4e5d-0000-000000000000",
+          "name" : "Synchronize Output",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "18e38845-533b-3244-a456-561aae8a53db",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "2e5fe519-b0a5-3384-8213-8a94878ef59f",
+          "name" : "GetWeb",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 3
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 816.0,
+          "y" : 112.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "4e776b02-15e1-318c-b41b-d0d519047e7d",
+          "name" : "ViewWeb",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "341a6295-cbd6-400d-0000-000000000000",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "view" ],
+        "source" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 864.0,
+          "y" : -24.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "2e5fe519-b0a5-3384-8213-8a94878ef59f",
+          "name" : "GetWeb",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "6752efe8-f9fd-412c-0000-000000000000",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "get" ],
+        "source" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "6cc63011-586e-42c2-0000-000000000000",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ ],
+        "source" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "9babd9c4-b639-4e4c-0000-000000000000",
+          "name" : "Request",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "847cb04c-6df4-4492-0000-000000000000",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "6d905783-3f65-32a4-b0dc-ca4f076ab6d9",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failed identifiers" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "2e5fe519-b0a5-3384-8213-8a94878ef59f",
+          "name" : "GetWeb",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 2
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "91b30abd-34ba-42a7-0000-000000000000",
+          "name" : "Response",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "7a5169b8-54a3-4794-0000-000000000000",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "response" ],
+        "source" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 808.0,
+          "y" : 48.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "8d97e748-c8a6-3279-9ac0-90b39ab7104e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "4e776b02-15e1-318c-b41b-d0d519047e7d",
+          "name" : "ViewWeb",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "847cb04c-6df4-4492-0000-000000000000",
+          "name" : "Failure",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "ce8b9f06-e9ec-3a93-8c5c-e911d2be6176",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "4e776b02-15e1-318c-b41b-d0d519047e7d",
+          "name" : "ViewWeb",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 5
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ {
+          "x" : 864.0,
+          "y" : -88.0
+        } ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "227ba484-9da6-4ffc-0000-000000000000",
+          "name" : "WebConnector Router",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "dd854f61-3191-3997-99a1-2a35a1f51e2e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "response" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+          "id" : "2e5fe519-b0a5-3384-8213-8a94878ef59f",
+          "name" : "GetWeb",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 1
+      } ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "5 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+      "inputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "INPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "9babd9c4-b639-4e4c-0000-000000000000",
+        "name" : "Request",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -120.0,
+          "y" : -95.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "INPUT_PORT"
+      } ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "WebConnectorGroupFlow",
+      "outputPorts" : [ {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "40693666-d50e-4e5d-0000-000000000000",
+        "name" : "Synchronize Output",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 1680.0,
+          "y" : 31.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      }, {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "847cb04c-6df4-4492-0000-000000000000",
+        "name" : "Failure",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : 2280.0,
+          "y" : 45.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      }, {
+        "allowRemoteAccess" : false,
+        "componentType" : "OUTPUT_PORT",
+        "concurrentlySchedulableTaskCount" : 1,
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "91b30abd-34ba-42a7-0000-000000000000",
+        "name" : "Response",
+        "portFunction" : "STANDARD",
+        "position" : {
+          "x" : -120.0,
+          "y" : 185.0
+        },
+        "scheduledState" : "ENABLED",
+        "type" : "OUTPUT_PORT"
+      } ],
+      "parameterContextName" : "POC parameter context",
+      "position" : {
+        "x" : -304.0,
+        "y" : -136.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ "delete", "fetch", "groups", "hold", "list", "patch", "put" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "ERROR",
+        "bundle" : {
+          "artifact" : "idol-nifi-connector-router-nar",
+          "group" : "idol.nifi.connector",
+          "version" : "25.1.0-nifi2"
+        },
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "227ba484-9da6-4ffc-0000-000000000000",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "WebConnector Router",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 50.0,
+          "y" : 5.0
+        },
+        "properties" : { },
+        "propertyDescriptors" : {
+          "DatabaseService" : {
+            "displayName" : "State Database Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "DatabaseService",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "idol.nifi.connector.router.ConnectorRouter",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "ERROR",
+        "bundle" : {
+          "artifact" : "idol-nifi-connector-web",
+          "group" : "idol.nifi.connector",
+          "version" : "25.4.0-nifi2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "2e5fe519-b0a5-3384-8213-8a94878ef59f",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "GetWeb",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 1024.0,
+          "y" : -120.0
+        },
+        "properties" : {
+          "RedirectAsLink" : "false",
+          "SSLCheckCertificate" : "false",
+          "GoogleNewsQueryEndpoint" : "everything",
+          "MaxLinkPercentagePerPage" : "100.0",
+          "RenditionImageQuality" : "100",
+          "ThumbnailRenditionHeight" : "400",
+          "EnablePrioritizedSync" : "false",
+          "IgnoreRobotProtocolErrors" : "false",
+          "PageTimeout" : "120s",
+          "MetadataIncludeMetaTags" : "true",
+          "ClippingMode" : "NONE",
+          "ViewportHeight" : "1080",
+          "ReadabilityFailOnError" : "false",
+          "RenditionImageFormat" : "jpeg",
+          "StripFragmentIdentifiers" : "true",
+          "RemoveNoframes" : "false",
+          "FollowRobotProtocol" : "true",
+          "ProcessShadowDOMs" : "true",
+          "FailOnScriptTimeout" : "false",
+          "RemoveNoScripts" : "false",
+          "MetadataIncludeTextPositions" : "false",
+          "CssUnselectOnFailure" : "SelectNone",
+          "MaxPageSize" : "100000000",
+          "RssXSLFilePath" : "${idol.repository.resources.dir}/RSSTransform.xsl",
+          "ClippedPdfRendition" : "false",
+          "DeleteOnServerError" : "false",
+          "CleanCookieJar" : "false",
+          "StayOnSite" : "true",
+          "RemoveScripts" : "false",
+          "PageDateMetadataFormat" : "YYYY-SHORTMONTH-DD HH:NN:SS ZZZ",
+          "MaxDepth" : "-1",
+          "MaxWaitForScripts" : "30s",
+          "GoogleNewsQuerySortBy" : "publishedAt",
+          "RobotProtocolEnableCache" : "true",
+          "CreateThumbnailRendition" : "false",
+          "MaxKBytesPerSec" : "0.0",
+          "ReadabilityFile" : "${idol.repository.resources.dir}/readability.js",
+          "GoogleNewsApiUrl" : "https://newsapi.org/v2",
+          "MetadataIncludeLinks" : "true",
+          "IngestPagesWithNoDate" : "true",
+          "ValidLinkRegex" : "(https?|data):.*",
+          "SpiderDateFilteredPages" : "true",
+          "PageDelay" : "0s",
+          "RegexCaseInsensitive" : "false",
+          "LinkAttributes" : "\"href\",\"src\"",
+          "RobotProtocolCacheDirectory" : "${idol.repository.storage.dir}/robotProtocolCache",
+          "PageLoadTimeout" : "40s",
+          "DisableJavascript" : "false",
+          "SitemapCacheDirectory" : "${idol.repository.storage.dir}/sitemapCache",
+          "FollowFlash" : "false",
+          "IngestAsPlainText" : "false",
+          "MaxLinksPerPage" : "100",
+          "MaxPages" : "2000",
+          "CssSelectOnFailure" : "SelectAll",
+          "PageDateHeaders" : "\"Last-Modified\"",
+          "UseSitemapFromRobots" : "false",
+          "DateInUrl" : "false",
+          "EnableAutnRank" : "false",
+          "ReadabilityOptionsFile" : "${idol.repository.resources.dir}/readabilityOptions.json",
+          "DeleteOnServerErrorCodes" : "\"500\"",
+          "MaxLinkChangePercentage" : "0.0",
+          "IgnoreSitemapScopeErrors" : "false",
+          "SiteDuration" : "0s",
+          "EnableJavascriptConsoleLogging" : "false",
+          "UserAgent" : "Autn-WKOOP",
+          "NormalizeWhitespace" : "false",
+          "FullPageRender" : "true",
+          "CreateImageRendition" : "false",
+          "ThumbnailRenditionWidth" : "400",
+          "MaxRedirects" : "25",
+          "ViewportWidth" : "1920",
+          "ClippedImageRendition" : "false",
+          "MinPageSize" : "100",
+          "ClippedThumbnailRendition" : "false",
+          "IgnoreCanonicalLinks" : "false",
+          "MaxLinkChanges" : "0",
+          "DateFormats" : "\"DD SHORTMONTH YYYY HH:NN:SS ZZZ\",\"YYYY-SHORTMONTH-DD HH:NN:SS ZZZ\",\"YYYY-SHORTMONTH-DD HH:NN:SS\",\"YYYY-MM-DD HH:NN:SS\",\"YYYY-SHORTMONTH-DD\",\"YYYY-MM-DD\",\"DDMMYYYY\",\"YYMMDD\",\"YYMMD\",\"DDLONGMONTHYYYY\",\"DDSHORTMONTHYYYY\",\"LONGMONTH DD\",\"DD-MM-YYYY\",\"YY-MM-DD\",\"YY-MM-D\",\"DD-LONGMONTH-YYYY\",\"DD-SHORTMONTH-YYYY\",\"LONGMONTH-DD\"",
+          "RemoveComments" : "false",
+          "ResolveLinks" : "true",
+          "SitemapEnableCache" : "true",
+          "ExtractDataUris" : "true",
+          "ScriptInactivityTimeout" : "0.5s",
+          "CreatePdfRendition" : "false"
+        },
+        "propertyDescriptors" : {
+          "IgnoreCanonicalLinksTargetUrlRegex" : {
+            "displayName" : "Ignore canonical links Target Url Regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreCanonicalLinksTargetUrlRegex",
+            "sensitive" : false
+          },
+          "RedirectAsLink" : {
+            "displayName" : "Redirect as link",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RedirectAsLink",
+            "sensitive" : false
+          },
+          "SSLCheckCertificate" : {
+            "displayName" : "SSL check certificate",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SSLCheckCertificate",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryEndpoint" : {
+            "displayName" : "GoogleNewsQueryEndpoint",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryEndpoint",
+            "sensitive" : false
+          },
+          "PageCantHaveRegex" : {
+            "displayName" : "Page content cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageCantHaveRegex",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryTo" : {
+            "displayName" : "GoogleNewsQueryTo",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryTo",
+            "sensitive" : false
+          },
+          "ClipPageUsingCssSelect" : {
+            "displayName" : "Clip CSS select",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClipPageUsingCssSelect",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryCountry" : {
+            "displayName" : "GoogleNewsQueryCountry",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryCountry",
+            "sensitive" : false
+          },
+          "MaxLinkPercentagePerPage" : {
+            "displayName" : "Maximum link percentage per page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxLinkPercentagePerPage",
+            "sensitive" : false
+          },
+          "RenditionImageQuality" : {
+            "displayName" : "Rendition image quality",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionImageQuality",
+            "sensitive" : false
+          },
+          "ThumbnailRenditionHeight" : {
+            "displayName" : "Rendition thumbnail height",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ThumbnailRenditionHeight",
+            "sensitive" : false
+          },
+          "LinkElementMustHaveRegex" : {
+            "displayName" : "Link element must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkElementMustHaveRegex",
+            "sensitive" : false
+          },
+          "EnablePrioritizedSync" : {
+            "displayName" : "Enable prioritized sync",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "EnablePrioritizedSync",
+            "sensitive" : false
+          },
+          "IgnoreRobotProtocolErrors" : {
+            "displayName" : "Ignore robot protocol errors",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreRobotProtocolErrors",
+            "sensitive" : false
+          },
+          "AuthSections" : {
+            "displayName" : "Authentication sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "AuthSections",
+            "sensitive" : false
+          },
+          "ResourceUrlMustHaveRegex" : {
+            "displayName" : "Resource URL must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResourceUrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "GoogleNewsQuerySearchIn" : {
+            "displayName" : "GoogleNewsQuerySearchIn",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQuerySearchIn",
+            "sensitive" : false
+          },
+          "PageTimeout" : {
+            "displayName" : "Page timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageTimeout",
+            "sensitive" : false
+          },
+          "WaitForStateSections" : {
+            "displayName" : "Wait for state sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "WaitForStateSections",
+            "sensitive" : false
+          },
+          "ContentTypeMustHaveRegex" : {
+            "displayName" : "Content type must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ContentTypeMustHaveRegex",
+            "sensitive" : false
+          },
+          "MetadataIncludeMetaTags" : {
+            "displayName" : "Meta tags",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeMetaTags",
+            "sensitive" : false
+          },
+          "ClippingMode" : {
+            "displayName" : "Clipping mode",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippingMode",
+            "sensitive" : false
+          },
+          "ViewportHeight" : {
+            "displayName" : "Rendition viewport height",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ViewportHeight",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryPageSize" : {
+            "displayName" : "GoogleNewsQueryPageSize",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryPageSize",
+            "sensitive" : false
+          },
+          "ReadabilityFailOnError" : {
+            "displayName" : "Readability fail on error",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityFailOnError",
+            "sensitive" : false
+          },
+          "RenditionImageFormat" : {
+            "displayName" : "Rendition image format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionImageFormat",
+            "sensitive" : false
+          },
+          "CookieUrls" : {
+            "displayName" : "Cookie URLs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CookieUrls",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryCategory" : {
+            "displayName" : "GoogleNewsQueryCategory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryCategory",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryKeywordsAndPhrases" : {
+            "displayName" : "GoogleNewsQueryKeywordsAndPhrases",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryKeywordsAndPhrases",
+            "sensitive" : false
+          },
+          "ClippingSections" : {
+            "displayName" : "ClippingSections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippingSections",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryDomains" : {
+            "displayName" : "GoogleNewsQueryDomains",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryDomains",
+            "sensitive" : false
+          },
+          "PageMustHaveRegex" : {
+            "displayName" : "Page content must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageMustHaveRegex",
+            "sensitive" : false
+          },
+          "StripFragmentIdentifiers" : {
+            "displayName" : "Strip fragment identifiers",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "StripFragmentIdentifiers",
+            "sensitive" : false
+          },
+          "RemoveNoframes" : {
+            "displayName" : "Remove noframes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveNoframes",
+            "sensitive" : false
+          },
+          "FollowRobotProtocol" : {
+            "displayName" : "Follow robot protocol",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FollowRobotProtocol",
+            "sensitive" : false
+          },
+          "ProcessShadowDOMs" : {
+            "displayName" : "ProcessShadowDOMs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ProcessShadowDOMs",
+            "sensitive" : false
+          },
+          "FailOnScriptTimeout" : {
+            "displayName" : "Script timeout fails page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FailOnScriptTimeout",
+            "sensitive" : false
+          },
+          "RemoveNoScripts" : {
+            "displayName" : "Remove noscripts",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveNoScripts",
+            "sensitive" : false
+          },
+          "SitemapFile" : {
+            "displayName" : "Sitemap file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapFile",
+            "sensitive" : false
+          },
+          "GoogleNewsQuerySources" : {
+            "displayName" : "GoogleNewsQuerySources",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQuerySources",
+            "sensitive" : false
+          },
+          "PageDateAttributes" : {
+            "displayName" : "Page date attributes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateAttributes",
+            "sensitive" : false
+          },
+          "TimeoutsSections" : {
+            "displayName" : "TimeoutsSections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "TimeoutsSections",
+            "sensitive" : false
+          },
+          "CustomJSSections" : {
+            "displayName" : "Custom JavaScript sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomJSSections",
+            "sensitive" : false
+          },
+          "IdolLicenseService" : {
+            "displayName" : "IDOL License Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "IdolLicenseService",
+            "sensitive" : false
+          },
+          "MetadataHeadersFieldPrefix" : {
+            "displayName" : "Metadata headers field prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataHeadersFieldPrefix",
+            "sensitive" : false
+          },
+          "ProxyConfigService" : {
+            "displayName" : "Proxy Configuration Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "ProxyConfigService",
+            "sensitive" : false
+          },
+          "MetadataIncludeTextPositions" : {
+            "displayName" : "MetadataIncludeTextPositions",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeTextPositions",
+            "sensitive" : false
+          },
+          "Url" : {
+            "displayName" : "Start URLs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Url",
+            "sensitive" : false
+          },
+          "CssUnselectOnFailure" : {
+            "displayName" : "Clip CSS unselect on failure",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CssUnselectOnFailure",
+            "sensitive" : false
+          },
+          "MaxPageSize" : {
+            "displayName" : "Maximum page size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxPageSize",
+            "sensitive" : false
+          },
+          "MetadataFieldSections" : {
+            "displayName" : "Metadata field sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataFieldSections",
+            "sensitive" : false
+          },
+          "RssXSLFilePath" : {
+            "displayName" : "RSS XSL File Path",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RssXSLFilePath",
+            "sensitive" : false
+          },
+          "FormsSections" : {
+            "displayName" : "Forms sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FormsSections",
+            "sensitive" : false
+          },
+          "ClippedPdfRendition" : {
+            "displayName" : "Clipped PDF rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedPdfRendition",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryKeywordsAndPhrasesInTitle" : {
+            "displayName" : "GoogleNewsQueryKeywordsAndPhrasesInTitle",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryKeywordsAndPhrasesInTitle",
+            "sensitive" : false
+          },
+          "CustomHeaderValues" : {
+            "displayName" : "Custom header values",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomHeaderValues",
+            "sensitive" : false
+          },
+          "DeleteOnServerError" : {
+            "displayName" : "Delete on server error",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DeleteOnServerError",
+            "sensitive" : false
+          },
+          "CleanCookieJar" : {
+            "displayName" : "Clean cookie jar",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CleanCookieJar",
+            "sensitive" : false
+          },
+          "StayOnSite" : {
+            "displayName" : "Stay on site",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "StayOnSite",
+            "sensitive" : false
+          },
+          "FilterPagesLuaScript" : {
+            "displayName" : "Filter pages Lua script",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FilterPagesLuaScript",
+            "sensitive" : false
+          },
+          "ChildDocumentSections" : {
+            "displayName" : "Child document sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ChildDocumentSections",
+            "sensitive" : false
+          },
+          "SpiderUrlCantHaveRegex" : {
+            "displayName" : "Spider URL cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SpiderUrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "MinPageDate" : {
+            "displayName" : "Page date minimum",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MinPageDate",
+            "sensitive" : false
+          },
+          "RemoveScripts" : {
+            "displayName" : "Remove scripts",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveScripts",
+            "sensitive" : false
+          },
+          "PageDateMetadataFormat" : {
+            "displayName" : "Page date format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateMetadataFormat",
+            "sensitive" : false
+          },
+          "MaxDepth" : {
+            "displayName" : "Depth",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxDepth",
+            "sensitive" : false
+          },
+          "MaxWaitForScripts" : {
+            "displayName" : "Script maximum wait time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxWaitForScripts",
+            "sensitive" : false
+          },
+          "GoogleNewsQuerySortBy" : {
+            "displayName" : "GoogleNewsQuerySortBy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQuerySortBy",
+            "sensitive" : false
+          },
+          "RobotProtocolEnableCache" : {
+            "displayName" : "Robot protocol enable cache",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RobotProtocolEnableCache",
+            "sensitive" : false
+          },
+          "CreateThumbnailRendition" : {
+            "displayName" : "Rendition create thumbnail",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreateThumbnailRendition",
+            "sensitive" : false
+          },
+          "MaxKBytesPerSec" : {
+            "displayName" : "Maximum KBytes per second",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxKBytesPerSec",
+            "sensitive" : false
+          },
+          "ReadabilityFile" : {
+            "displayName" : "Readability file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityFile",
+            "sensitive" : false
+          },
+          "GoogleNewsApiUrl" : {
+            "displayName" : "GoogleNewsApiUrl",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsApiUrl",
+            "sensitive" : false
+          },
+          "MetadataIncludeLinks" : {
+            "displayName" : "Include links in metadata",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeLinks",
+            "sensitive" : false
+          },
+          "RedirectAsLinkSourceUrlRegex" : {
+            "displayName" : "Redirect as link Source Url Regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RedirectAsLinkSourceUrlRegex",
+            "sensitive" : false
+          },
+          "IngestPagesWithNoDate" : {
+            "displayName" : "Ingest pages with no date",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IngestPagesWithNoDate",
+            "sensitive" : false
+          },
+          "ValidLinkRegex" : {
+            "displayName" : "Link validation regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ValidLinkRegex",
+            "sensitive" : false
+          },
+          "SpiderDateFilteredPages" : {
+            "displayName" : "Spider date filtered pages",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SpiderDateFilteredPages",
+            "sensitive" : false
+          },
+          "PageDelay" : {
+            "displayName" : "Page delay",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDelay",
+            "sensitive" : false
+          },
+          "PageRankLuaScript" : {
+            "displayName" : "Rank pages Lua script",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageRankLuaScript",
+            "sensitive" : false
+          },
+          "RegexCaseInsensitive" : {
+            "displayName" : "Regex case insensitive",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RegexCaseInsensitive",
+            "sensitive" : false
+          },
+          "LinkAttributes" : {
+            "displayName" : "Link attributes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkAttributes",
+            "sensitive" : false
+          },
+          "SitemapIndexUrlMustHaveRegex" : {
+            "displayName" : "Sitemap index URL must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapIndexUrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "RobotProtocolCacheDirectory" : {
+            "displayName" : "Robot protocol cache directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RobotProtocolCacheDirectory",
+            "sensitive" : false
+          },
+          "ClientCertificateSections" : {
+            "displayName" : "Client certificate sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClientCertificateSections",
+            "sensitive" : false
+          },
+          "PageLoadTimeout" : {
+            "displayName" : "Page load timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageLoadTimeout",
+            "sensitive" : false
+          },
+          "CrawlUrlMustHaveRegex" : {
+            "displayName" : "CrawlUrlMustHaveRegex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CrawlUrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "DisableJavascript" : {
+            "displayName" : "Disable JavaScript",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DisableJavascript",
+            "sensitive" : false
+          },
+          "UrlMustHaveRegex" : {
+            "displayName" : "URL must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "UrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "SitemapIndexUrlCantHaveRegex" : {
+            "displayName" : "Sitemap index URL cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapIndexUrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "SitemapCacheDirectory" : {
+            "displayName" : "SitemapCacheDirectory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapCacheDirectory",
+            "sensitive" : false
+          },
+          "FollowFlash" : {
+            "displayName" : "Follow flash",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FollowFlash",
+            "sensitive" : false
+          },
+          "IngestAsPlainText" : {
+            "displayName" : "Ingest as plain text",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IngestAsPlainText",
+            "sensitive" : false
+          },
+          "MaxLinksPerPage" : {
+            "displayName" : "Maximum links per page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxLinksPerPage",
+            "sensitive" : false
+          },
+          "MaxPages" : {
+            "displayName" : "Maximum pages",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxPages",
+            "sensitive" : false
+          },
+          "GoogleNewsApiKey" : {
+            "displayName" : "GoogleNewsApiKey",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsApiKey",
+            "sensitive" : true
+          },
+          "JsDialogSections" : {
+            "displayName" : "JsDialog sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JsDialogSections",
+            "sensitive" : false
+          },
+          "RenditionsFilepath" : {
+            "displayName" : "Rendition file path",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionsFilepath",
+            "sensitive" : false
+          },
+          "CssSelectOnFailure" : {
+            "displayName" : "Clip CSS select on failure",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CssSelectOnFailure",
+            "sensitive" : false
+          },
+          "PageDateHeaders" : {
+            "displayName" : "Page date headers",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateHeaders",
+            "sensitive" : false
+          },
+          "UseSitemapFromRobots" : {
+            "displayName" : "Sitemap from robots",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "UseSitemapFromRobots",
+            "sensitive" : false
+          },
+          "DateInUrl" : {
+            "displayName" : "Page date in URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DateInUrl",
+            "sensitive" : false
+          },
+          "CustomHeaderNames" : {
+            "displayName" : "Custom header names",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomHeaderNames",
+            "sensitive" : false
+          },
+          "EnableAutnRank" : {
+            "displayName" : "Rank pages",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "EnableAutnRank",
+            "sensitive" : false
+          },
+          "ReadabilityOptionsFile" : {
+            "displayName" : "Readability options file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityOptionsFile",
+            "sensitive" : false
+          },
+          "DocumentRegistryService" : {
+            "displayName" : "Document Registry Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "DocumentRegistryService",
+            "sensitive" : false
+          },
+          "DeleteOnServerErrorCodes" : {
+            "displayName" : "Delete on server error codes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DeleteOnServerErrorCodes",
+            "sensitive" : false
+          },
+          "MaxLinkChangePercentage" : {
+            "displayName" : "Maximum link change percentage",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxLinkChangePercentage",
+            "sensitive" : false
+          },
+          "CrawlUrlCantHaveRegex" : {
+            "displayName" : "CrawlUrlCantHaveRegex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CrawlUrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "ResourceUrlCantHaveRegex" : {
+            "displayName" : "Resource URL cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResourceUrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "IgnoreSitemapScopeErrors" : {
+            "displayName" : "Sitemap ignore scope errors",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreSitemapScopeErrors",
+            "sensitive" : false
+          },
+          "SitemapUrl" : {
+            "displayName" : "Sitemap URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapUrl",
+            "sensitive" : false
+          },
+          "MetadataMetaTagsFieldPrefix" : {
+            "displayName" : "Meta tags field prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataMetaTagsFieldPrefix",
+            "sensitive" : false
+          },
+          "SiteDuration" : {
+            "displayName" : "Site duration",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SiteDuration",
+            "sensitive" : false
+          },
+          "LinkElementCantHaveRegex" : {
+            "displayName" : "Link element cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkElementCantHaveRegex",
+            "sensitive" : false
+          },
+          "SpiderUrlMustHaveRegex" : {
+            "displayName" : "Spider URL must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SpiderUrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryFrom" : {
+            "displayName" : "GoogleNewsQueryFrom",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryFrom",
+            "sensitive" : false
+          },
+          "EnableJavascriptConsoleLogging" : {
+            "displayName" : "Custom JavaScript enable logging",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "EnableJavascriptConsoleLogging",
+            "sensitive" : false
+          },
+          "UserAgent" : {
+            "displayName" : "User agent",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "UserAgent",
+            "sensitive" : false
+          },
+          "NormalizeWhitespace" : {
+            "displayName" : "Normalize whitespace",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "NormalizeWhitespace",
+            "sensitive" : false
+          },
+          "FullPageRender" : {
+            "displayName" : "Render full page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FullPageRender",
+            "sensitive" : false
+          },
+          "ContentTypeCantHaveRegex" : {
+            "displayName" : "Content type cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ContentTypeCantHaveRegex",
+            "sensitive" : false
+          },
+          "CreateImageRendition" : {
+            "displayName" : "Rendition create image",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreateImageRendition",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryExcludeDomains" : {
+            "displayName" : "GoogleNewsQueryExcludeDomains",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryExcludeDomains",
+            "sensitive" : false
+          },
+          "ThumbnailRenditionWidth" : {
+            "displayName" : "Rendition thumbnail width",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ThumbnailRenditionWidth",
+            "sensitive" : false
+          },
+          "ClipPageUsingCssUnselect" : {
+            "displayName" : "Clip CSS unselect",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClipPageUsingCssUnselect",
+            "sensitive" : false
+          },
+          "MaxRedirects" : {
+            "displayName" : "Maximum redirects",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxRedirects",
+            "sensitive" : false
+          },
+          "ViewportWidth" : {
+            "displayName" : "Rendition viewport width",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ViewportWidth",
+            "sensitive" : false
+          },
+          "ClippedImageRendition" : {
+            "displayName" : "Clipped image rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedImageRendition",
+            "sensitive" : false
+          },
+          "MinPageSize" : {
+            "displayName" : "Minimum page size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MinPageSize",
+            "sensitive" : false
+          },
+          "ClippedThumbnailRendition" : {
+            "displayName" : "Clipped thumbnail rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedThumbnailRendition",
+            "sensitive" : false
+          },
+          "ScriptedProcessingSections" : {
+            "displayName" : "ScriptedProcessingSections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ScriptedProcessingSections",
+            "sensitive" : false
+          },
+          "DatabaseService" : {
+            "displayName" : "State Database Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "DatabaseService",
+            "sensitive" : false
+          },
+          "IgnoreCanonicalLinks" : {
+            "displayName" : "Ignore canonical links",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreCanonicalLinks",
+            "sensitive" : false
+          },
+          "MaxLinkChanges" : {
+            "displayName" : "Maximum link changes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxLinkChanges",
+            "sensitive" : false
+          },
+          "DateFormats" : {
+            "displayName" : "Page date formats",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DateFormats",
+            "sensitive" : false
+          },
+          "RedirectAsLinkTargetUrlRegex" : {
+            "displayName" : "Redirect as link Target Url Regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RedirectAsLinkTargetUrlRegex",
+            "sensitive" : false
+          },
+          "RemoveComments" : {
+            "displayName" : "Remove comments",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveComments",
+            "sensitive" : false
+          },
+          "ErrorPageSections" : {
+            "displayName" : "Error page sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ErrorPageSections",
+            "sensitive" : false
+          },
+          "IgnoreCanonicalLinksSourceUrlRegex" : {
+            "displayName" : "Ignore canonical links Source Url Regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreCanonicalLinksSourceUrlRegex",
+            "sensitive" : false
+          },
+          "ResolveLinks" : {
+            "displayName" : "Resolve links",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResolveLinks",
+            "sensitive" : false
+          },
+          "GoogleNewsQueryLanguage" : {
+            "displayName" : "GoogleNewsQueryLanguage",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "GoogleNewsQueryLanguage",
+            "sensitive" : false
+          },
+          "SitemapEnableCache" : {
+            "displayName" : "SitemapEnableCache",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SitemapEnableCache",
+            "sensitive" : false
+          },
+          "StripQueryParametersRegex" : {
+            "displayName" : "Strip query parameters regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "StripQueryParametersRegex",
+            "sensitive" : false
+          },
+          "ExtractDataUris" : {
+            "displayName" : "Extract data URIs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ExtractDataUris",
+            "sensitive" : false
+          },
+          "ScriptInactivityTimeout" : {
+            "displayName" : "Script inactivity timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ScriptInactivityTimeout",
+            "sensitive" : false
+          },
+          "PageDateSelectors" : {
+            "displayName" : "Page date selectors",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateSelectors",
+            "sensitive" : false
+          },
+          "BlockingFiltersDirectory" : {
+            "displayName" : "Blocking filters directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "BlockingFiltersDirectory",
+            "sensitive" : false
+          },
+          "UrlCantHaveRegex" : {
+            "displayName" : "URL cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "UrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "CreatePdfRendition" : {
+            "displayName" : "Rendition create PDF",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreatePdfRendition",
+            "sensitive" : false
+          },
+          "MetadataHeadersRegex" : {
+            "displayName" : "Metadata headers regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataHeadersRegex",
+            "sensitive" : false
+          },
+          "MaxPageDate" : {
+            "displayName" : "Page date maximum",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxPageDate",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "1 hour",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "idol.nifi.connector.GetWeb",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "ERROR",
+        "bundle" : {
+          "artifact" : "idol-nifi-connector-web",
+          "group" : "idol.nifi.connector",
+          "version" : "25.4.0-nifi2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
+        "identifier" : "4e776b02-15e1-318c-b41b-d0d519047e7d",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "ViewWeb",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 1032.0,
+          "y" : 80.0
+        },
+        "properties" : {
+          "MaxKBytesPerSec" : "0.0",
+          "ReadabilityFile" : "${idol.repository.resources.dir}/readability.js",
+          "MetadataIncludeLinks" : "true",
+          "SSLCheckCertificate" : "false",
+          "ValidLinkRegex" : "(https?|data):.*",
+          "PageDelay" : "0s",
+          "LinkAttributes" : "\"href\",\"src\"",
+          "RenditionImageQuality" : "100",
+          "ThumbnailRenditionHeight" : "400",
+          "RobotProtocolCacheDirectory" : "${idol.repository.storage.dir}/robotProtocolCache",
+          "IgnoreRobotProtocolErrors" : "false",
+          "PageLoadTimeout" : "40s",
+          "PageTimeout" : "120s",
+          "DisableJavascript" : "false",
+          "MetadataIncludeMetaTags" : "true",
+          "ClippingMode" : "NONE",
+          "ViewportHeight" : "1080",
+          "ReadabilityFailOnError" : "false",
+          "RenditionImageFormat" : "jpeg",
+          "IngestAsPlainText" : "false",
+          "CssSelectOnFailure" : "SelectAll",
+          "PageDateHeaders" : "\"Last-Modified\"",
+          "StripFragmentIdentifiers" : "true",
+          "DateInUrl" : "false",
+          "RemoveNoframes" : "false",
+          "FollowRobotProtocol" : "true",
+          "ProcessShadowDOMs" : "true",
+          "FailOnScriptTimeout" : "false",
+          "RemoveNoScripts" : "false",
+          "ReadabilityOptionsFile" : "${idol.repository.resources.dir}/readabilityOptions.json",
+          "DeleteOnServerErrorCodes" : "\"500\"",
+          "MetadataIncludeTextPositions" : "false",
+          "CssUnselectOnFailure" : "SelectNone",
+          "RssXSLFilePath" : "${idol.repository.resources.dir}/RSSTransform.xsl",
+          "EnableJavascriptConsoleLogging" : "false",
+          "UserAgent" : "Autn-WKOOP",
+          "NormalizeWhitespace" : "false",
+          "ViewRenditionFormat" : "HTML",
+          "ClippedPdfRendition" : "false",
+          "FullPageRender" : "true",
+          "DeleteOnServerError" : "false",
+          "CreateImageRendition" : "false",
+          "ThumbnailRenditionWidth" : "400",
+          "MaxRedirects" : "25",
+          "CleanCookieJar" : "false",
+          "ViewportWidth" : "1920",
+          "ClippedImageRendition" : "false",
+          "ClippedThumbnailRendition" : "false",
+          "DateFormats" : "\"DD SHORTMONTH YYYY HH:NN:SS ZZZ\",\"YYYY-SHORTMONTH-DD HH:NN:SS ZZZ\",\"YYYY-SHORTMONTH-DD HH:NN:SS\",\"YYYY-MM-DD HH:NN:SS\",\"YYYY-SHORTMONTH-DD\",\"YYYY-MM-DD\",\"DDMMYYYY\",\"YYMMDD\",\"YYMMD\",\"DDLONGMONTHYYYY\",\"DDSHORTMONTHYYYY\",\"LONGMONTH DD\",\"DD-MM-YYYY\",\"YY-MM-DD\",\"YY-MM-D\",\"DD-LONGMONTH-YYYY\",\"DD-SHORTMONTH-YYYY\",\"LONGMONTH-DD\"",
+          "RemoveComments" : "false",
+          "ResolveLinks" : "true",
+          "ExtractDataUris" : "true",
+          "RemoveScripts" : "false",
+          "ScriptInactivityTimeout" : "0.5s",
+          "PageDateMetadataFormat" : "YYYY-SHORTMONTH-DD HH:NN:SS ZZZ",
+          "MaxWaitForScripts" : "30s",
+          "RobotProtocolEnableCache" : "true",
+          "CreatePdfRendition" : "false",
+          "CreateThumbnailRendition" : "false"
+        },
+        "propertyDescriptors" : {
+          "MaxKBytesPerSec" : {
+            "displayName" : "Maximum KBytes per second",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxKBytesPerSec",
+            "sensitive" : false
+          },
+          "ReadabilityFile" : {
+            "displayName" : "Readability file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityFile",
+            "sensitive" : false
+          },
+          "MetadataIncludeLinks" : {
+            "displayName" : "Include links in metadata",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeLinks",
+            "sensitive" : false
+          },
+          "SSLCheckCertificate" : {
+            "displayName" : "SSL check certificate",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "SSLCheckCertificate",
+            "sensitive" : false
+          },
+          "ValidLinkRegex" : {
+            "displayName" : "Link validation regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ValidLinkRegex",
+            "sensitive" : false
+          },
+          "PageDelay" : {
+            "displayName" : "Page delay",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDelay",
+            "sensitive" : false
+          },
+          "ClipPageUsingCssSelect" : {
+            "displayName" : "Clip CSS select",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClipPageUsingCssSelect",
+            "sensitive" : false
+          },
+          "LinkAttributes" : {
+            "displayName" : "Link attributes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkAttributes",
+            "sensitive" : false
+          },
+          "RenditionImageQuality" : {
+            "displayName" : "Rendition image quality",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionImageQuality",
+            "sensitive" : false
+          },
+          "ThumbnailRenditionHeight" : {
+            "displayName" : "Rendition thumbnail height",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ThumbnailRenditionHeight",
+            "sensitive" : false
+          },
+          "RobotProtocolCacheDirectory" : {
+            "displayName" : "Robot protocol cache directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RobotProtocolCacheDirectory",
+            "sensitive" : false
+          },
+          "ClientCertificateSections" : {
+            "displayName" : "Client certificate sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClientCertificateSections",
+            "sensitive" : false
+          },
+          "LinkElementMustHaveRegex" : {
+            "displayName" : "Link element must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkElementMustHaveRegex",
+            "sensitive" : false
+          },
+          "IgnoreRobotProtocolErrors" : {
+            "displayName" : "Ignore robot protocol errors",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IgnoreRobotProtocolErrors",
+            "sensitive" : false
+          },
+          "AuthSections" : {
+            "displayName" : "Authentication sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "AuthSections",
+            "sensitive" : false
+          },
+          "PageLoadTimeout" : {
+            "displayName" : "Page load timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageLoadTimeout",
+            "sensitive" : false
+          },
+          "ResourceUrlMustHaveRegex" : {
+            "displayName" : "Resource URL must have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResourceUrlMustHaveRegex",
+            "sensitive" : false
+          },
+          "KeyViewFilterService" : {
+            "displayName" : "KeyView Filter Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "KeyViewFilterService",
+            "sensitive" : false
+          },
+          "PageTimeout" : {
+            "displayName" : "Page timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageTimeout",
+            "sensitive" : false
+          },
+          "WaitForStateSections" : {
+            "displayName" : "Wait for state sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "WaitForStateSections",
+            "sensitive" : false
+          },
+          "DisableJavascript" : {
+            "displayName" : "Disable JavaScript",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DisableJavascript",
+            "sensitive" : false
+          },
+          "MetadataIncludeMetaTags" : {
+            "displayName" : "Meta tags",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeMetaTags",
+            "sensitive" : false
+          },
+          "ClippingMode" : {
+            "displayName" : "Clipping mode",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippingMode",
+            "sensitive" : false
+          },
+          "ViewportHeight" : {
+            "displayName" : "Rendition viewport height",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ViewportHeight",
+            "sensitive" : false
+          },
+          "ReadabilityFailOnError" : {
+            "displayName" : "Readability fail on error",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityFailOnError",
+            "sensitive" : false
+          },
+          "RenditionImageFormat" : {
+            "displayName" : "Rendition image format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionImageFormat",
+            "sensitive" : false
+          },
+          "CookieUrls" : {
+            "displayName" : "Cookie URLs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CookieUrls",
+            "sensitive" : false
+          },
+          "ClippingSections" : {
+            "displayName" : "ClippingSections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippingSections",
+            "sensitive" : false
+          },
+          "IngestAsPlainText" : {
+            "displayName" : "Ingest as plain text",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "IngestAsPlainText",
+            "sensitive" : false
+          },
+          "JsDialogSections" : {
+            "displayName" : "JsDialog sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "JsDialogSections",
+            "sensitive" : false
+          },
+          "RenditionsFilepath" : {
+            "displayName" : "Rendition file path",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RenditionsFilepath",
+            "sensitive" : false
+          },
+          "CssSelectOnFailure" : {
+            "displayName" : "Clip CSS select on failure",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CssSelectOnFailure",
+            "sensitive" : false
+          },
+          "PageDateHeaders" : {
+            "displayName" : "Page date headers",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateHeaders",
+            "sensitive" : false
+          },
+          "StripFragmentIdentifiers" : {
+            "displayName" : "Strip fragment identifiers",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "StripFragmentIdentifiers",
+            "sensitive" : false
+          },
+          "DateInUrl" : {
+            "displayName" : "Page date in URL",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DateInUrl",
+            "sensitive" : false
+          },
+          "RemoveNoframes" : {
+            "displayName" : "Remove noframes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveNoframes",
+            "sensitive" : false
+          },
+          "FollowRobotProtocol" : {
+            "displayName" : "Follow robot protocol",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FollowRobotProtocol",
+            "sensitive" : false
+          },
+          "ProcessShadowDOMs" : {
+            "displayName" : "ProcessShadowDOMs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ProcessShadowDOMs",
+            "sensitive" : false
+          },
+          "FailOnScriptTimeout" : {
+            "displayName" : "Script timeout fails page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FailOnScriptTimeout",
+            "sensitive" : false
+          },
+          "CustomHeaderNames" : {
+            "displayName" : "Custom header names",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomHeaderNames",
+            "sensitive" : false
+          },
+          "RemoveNoScripts" : {
+            "displayName" : "Remove noscripts",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveNoScripts",
+            "sensitive" : false
+          },
+          "ReadabilityOptionsFile" : {
+            "displayName" : "Readability options file",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ReadabilityOptionsFile",
+            "sensitive" : false
+          },
+          "DeleteOnServerErrorCodes" : {
+            "displayName" : "Delete on server error codes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DeleteOnServerErrorCodes",
+            "sensitive" : false
+          },
+          "PageDateAttributes" : {
+            "displayName" : "Page date attributes",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateAttributes",
+            "sensitive" : false
+          },
+          "TimeoutsSections" : {
+            "displayName" : "TimeoutsSections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "TimeoutsSections",
+            "sensitive" : false
+          },
+          "CustomJSSections" : {
+            "displayName" : "Custom JavaScript sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomJSSections",
+            "sensitive" : false
+          },
+          "IdolLicenseService" : {
+            "displayName" : "IDOL License Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "IdolLicenseService",
+            "sensitive" : false
+          },
+          "MetadataHeadersFieldPrefix" : {
+            "displayName" : "Metadata headers field prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataHeadersFieldPrefix",
+            "sensitive" : false
+          },
+          "ProxyConfigService" : {
+            "displayName" : "Proxy Configuration Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "ProxyConfigService",
+            "sensitive" : false
+          },
+          "MetadataIncludeTextPositions" : {
+            "displayName" : "MetadataIncludeTextPositions",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataIncludeTextPositions",
+            "sensitive" : false
+          },
+          "ResourceUrlCantHaveRegex" : {
+            "displayName" : "Resource URL cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResourceUrlCantHaveRegex",
+            "sensitive" : false
+          },
+          "CssUnselectOnFailure" : {
+            "displayName" : "Clip CSS unselect on failure",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CssUnselectOnFailure",
+            "sensitive" : false
+          },
+          "MetadataMetaTagsFieldPrefix" : {
+            "displayName" : "Meta tags field prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataMetaTagsFieldPrefix",
+            "sensitive" : false
+          },
+          "MetadataFieldSections" : {
+            "displayName" : "Metadata field sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataFieldSections",
+            "sensitive" : false
+          },
+          "LinkElementCantHaveRegex" : {
+            "displayName" : "Link element cant have regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "LinkElementCantHaveRegex",
+            "sensitive" : false
+          },
+          "RssXSLFilePath" : {
+            "displayName" : "RSS XSL File Path",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RssXSLFilePath",
+            "sensitive" : false
+          },
+          "FormsSections" : {
+            "displayName" : "Forms sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FormsSections",
+            "sensitive" : false
+          },
+          "EnableJavascriptConsoleLogging" : {
+            "displayName" : "Custom JavaScript enable logging",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "EnableJavascriptConsoleLogging",
+            "sensitive" : false
+          },
+          "UserAgent" : {
+            "displayName" : "User agent",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "UserAgent",
+            "sensitive" : false
+          },
+          "NormalizeWhitespace" : {
+            "displayName" : "Normalize whitespace",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "NormalizeWhitespace",
+            "sensitive" : false
+          },
+          "ViewRenditionFormat" : {
+            "displayName" : "View rendition format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ViewRenditionFormat",
+            "sensitive" : false
+          },
+          "ClippedPdfRendition" : {
+            "displayName" : "Clipped PDF rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedPdfRendition",
+            "sensitive" : false
+          },
+          "CustomHeaderValues" : {
+            "displayName" : "Custom header values",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CustomHeaderValues",
+            "sensitive" : false
+          },
+          "FullPageRender" : {
+            "displayName" : "Render full page",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "FullPageRender",
+            "sensitive" : false
+          },
+          "DeleteOnServerError" : {
+            "displayName" : "Delete on server error",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DeleteOnServerError",
+            "sensitive" : false
+          },
+          "CreateImageRendition" : {
+            "displayName" : "Rendition create image",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreateImageRendition",
+            "sensitive" : false
+          },
+          "ThumbnailRenditionWidth" : {
+            "displayName" : "Rendition thumbnail width",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ThumbnailRenditionWidth",
+            "sensitive" : false
+          },
+          "ClipPageUsingCssUnselect" : {
+            "displayName" : "Clip CSS unselect",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClipPageUsingCssUnselect",
+            "sensitive" : false
+          },
+          "MaxRedirects" : {
+            "displayName" : "Maximum redirects",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxRedirects",
+            "sensitive" : false
+          },
+          "CleanCookieJar" : {
+            "displayName" : "Clean cookie jar",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CleanCookieJar",
+            "sensitive" : false
+          },
+          "ViewportWidth" : {
+            "displayName" : "Rendition viewport width",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ViewportWidth",
+            "sensitive" : false
+          },
+          "ClippedImageRendition" : {
+            "displayName" : "Clipped image rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedImageRendition",
+            "sensitive" : false
+          },
+          "ChildDocumentSections" : {
+            "displayName" : "Child document sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ChildDocumentSections",
+            "sensitive" : false
+          },
+          "ClippedThumbnailRendition" : {
+            "displayName" : "Clipped thumbnail rendition",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ClippedThumbnailRendition",
+            "sensitive" : false
+          },
+          "DateFormats" : {
+            "displayName" : "Page date formats",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "DateFormats",
+            "sensitive" : false
+          },
+          "RemoveComments" : {
+            "displayName" : "Remove comments",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveComments",
+            "sensitive" : false
+          },
+          "ErrorPageSections" : {
+            "displayName" : "Error page sections",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ErrorPageSections",
+            "sensitive" : false
+          },
+          "ResolveLinks" : {
+            "displayName" : "Resolve links",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ResolveLinks",
+            "sensitive" : false
+          },
+          "StripQueryParametersRegex" : {
+            "displayName" : "Strip query parameters regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "StripQueryParametersRegex",
+            "sensitive" : false
+          },
+          "ExtractDataUris" : {
+            "displayName" : "Extract data URIs",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ExtractDataUris",
+            "sensitive" : false
+          },
+          "RemoveScripts" : {
+            "displayName" : "Remove scripts",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RemoveScripts",
+            "sensitive" : false
+          },
+          "ScriptInactivityTimeout" : {
+            "displayName" : "Script inactivity timeout",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "ScriptInactivityTimeout",
+            "sensitive" : false
+          },
+          "PageDateMetadataFormat" : {
+            "displayName" : "Page date format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateMetadataFormat",
+            "sensitive" : false
+          },
+          "PageDateSelectors" : {
+            "displayName" : "Page date selectors",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "PageDateSelectors",
+            "sensitive" : false
+          },
+          "BlockingFiltersDirectory" : {
+            "displayName" : "Blocking filters directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "BlockingFiltersDirectory",
+            "sensitive" : false
+          },
+          "MaxWaitForScripts" : {
+            "displayName" : "Script maximum wait time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MaxWaitForScripts",
+            "sensitive" : false
+          },
+          "RobotProtocolEnableCache" : {
+            "displayName" : "Robot protocol enable cache",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "RobotProtocolEnableCache",
+            "sensitive" : false
+          },
+          "CreatePdfRendition" : {
+            "displayName" : "Rendition create PDF",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreatePdfRendition",
+            "sensitive" : false
+          },
+          "MetadataHeadersRegex" : {
+            "displayName" : "Metadata headers regex",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "MetadataHeadersRegex",
+            "sensitive" : false
+          },
+          "CreateThumbnailRendition" : {
+            "displayName" : "Rendition create thumbnail",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CreateThumbnailRendition",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "idol.nifi.connector.ViewWeb",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    }, {
       "comments" : "",
       "componentType" : "PROCESS_GROUP",
       "connections" : [ {
@@ -2131,8 +4454,8 @@
       } ],
       "parameterContextName" : "Connector ACI Server Parameters",
       "position" : {
-        "x" : -304.0,
-        "y" : -120.0
+        "x" : -312.0,
+        "y" : -368.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -2630,6 +4953,31 @@
         "value" : "/lua/blank.lua"
       } ]
     },
+    "POC parameter context" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "Use this for all POCs",
+      "inheritedParameterContexts" : [ ],
+      "name" : "POC parameter context",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "ACI Handler",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "efe99ef8-0199-1000-0e98-97825f338139"
+      }, {
+        "description" : "",
+        "name" : "KeyViewFilter Service",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "469bdf2a-b0dd-3863-b69b-ad16be12b9f6"
+      }, {
+        "description" : "",
+        "name" : "License Server",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "6a1a73a8-38fe-336f-9a74-b989f2d379e1"
+      } ]
+    },
     "Connector ACI Server Parameters" : {
       "componentType" : "PARAMETER_CONTEXT",
       "inheritedParameterContexts" : [ ],
@@ -2659,6 +5007,6 @@
   "snapshotMetadata" : {
     "author" : "vinay.joseph@demo.local",
     "flowIdentifier" : "Teaching-Oren",
-    "timestamp" : 1760938793724
+    "timestamp" : 1760939105554
   }
 }
