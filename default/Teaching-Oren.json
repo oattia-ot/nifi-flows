@@ -614,8 +614,8 @@
       } ],
       "parameterContextName" : "Connector ACI Server Parameters",
       "position" : {
-        "x" : -312.0,
-        "y" : -368.0
+        "x" : -304.0,
+        "y" : -440.0
       },
       "processGroups" : [ {
         "comments" : "",
@@ -2630,7 +2630,7 @@
         "type" : "idol.nifi.connector.GetWeb",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ ],
+        "autoTerminatedRelationships" : [ "report" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "ERROR",
         "bundle" : {
@@ -2683,6 +2683,7 @@
           "RemoveNoScripts" : "false",
           "ReadabilityOptionsFile" : "${idol.repository.resources.dir}/readabilityOptions.json",
           "DeleteOnServerErrorCodes" : "\"500\"",
+          "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
           "MetadataIncludeTextPositions" : "false",
           "CssUnselectOnFailure" : "SelectNone",
           "RssXSLFilePath" : "${idol.repository.resources.dir}/RSSTransform.xsl",
@@ -3697,8 +3698,8 @@
         "type" : "OUTPUT_PORT"
       } ],
       "position" : {
-        "x" : -304.0,
-        "y" : 136.0
+        "x" : -320.0,
+        "y" : 192.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -4694,12 +4695,13 @@
         "name" : "WriteDocument",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -472.0,
-          "y" : 112.0
+          "x" : -464.0,
+          "y" : 152.0
         },
         "properties" : {
           "Format" : "IDX",
-          "WriteXmlValidFieldValues" : "false"
+          "WriteXmlValidFieldValues" : "false",
+          "IdolLicenseService" : "#{Idol License Service}"
         },
         "propertyDescriptors" : {
           "Format" : {
@@ -4721,13 +4723,6 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Filename",
-            "sensitive" : false
-          },
-          "IdolLicenseService" : {
-            "displayName" : "Idol License Service",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "IdolLicenseService",
             "sensitive" : false
           },
           "ArchiveDir" : {
@@ -4773,14 +4768,17 @@
         "name" : "PutIDOL",
         "penaltyDuration" : "5 min",
         "position" : {
-          "x" : -472.0,
+          "x" : -464.0,
           "y" : -64.0
         },
         "properties" : {
           "BatchSize" : "100",
           "CompressIndexFiles" : "false",
           "UseXmlIndexing" : "false",
+          "Port" : "11000",
           "ReplaceAllRefs" : "false",
+          "IdolLicenseService" : "#{Idol License Service1}",
+          "Host" : "localhost",
           "IndexOverSocket" : "true",
           "IdxUseXmlSafeFieldValues" : "false",
           "KeepExisting" : "false",
@@ -4844,13 +4842,6 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "ReplaceAllRefs",
-            "sensitive" : false
-          },
-          "IdolLicenseService" : {
-            "displayName" : "Idol License Service",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "IdolLicenseService",
             "sensitive" : false
           },
           "Host" : {
@@ -4959,6 +4950,18 @@
       "name" : "Custom Lua Parameter Context",
       "parameters" : [ {
         "description" : "",
+        "name" : "Idol License Service",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "310c538f-3b5e-3c23-ae0c-e8b22766e907"
+      }, {
+        "description" : "",
+        "name" : "IDOL ACI Port",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "11000"
+      }, {
+        "description" : "",
         "name" : "Custom_Lua_Script_Filename",
         "provided" : false,
         "sensitive" : false,
@@ -4971,16 +4974,16 @@
       "name" : "POC parameter context",
       "parameters" : [ {
         "description" : "",
-        "name" : "License Server",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "26e551fe-cce9-32c7-898b-b7760645e2f0"
-      }, {
-        "description" : "",
         "name" : "KeyViewFilter Service",
         "provided" : false,
         "sensitive" : false,
         "value" : "037483e5-019a-1000-5e24-d432c0b8d475"
+      }, {
+        "description" : "",
+        "name" : "License Server",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "26e551fe-cce9-32c7-898b-b7760645e2f0"
       }, {
         "description" : "",
         "name" : "ACI Handler",
@@ -4998,19 +5001,19 @@
         "name" : "ACI Context Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "c6dc9030-7b65-3132-9f8a-ec312c6a5966"
+        "value" : "03b78da0-4484-3de0-a1a8-fef412382f6e"
       }, {
         "description" : "",
         "name" : "IDOL License Service",
         "provided" : false,
         "sensitive" : false,
-        "value" : "17d779b7-5ddd-3b47-927c-a1be72c9ec1d"
+        "value" : "310c538f-3b5e-3c23-ae0c-e8b22766e907"
       }, {
         "description" : "",
         "name" : "Listening Port",
         "provided" : false,
         "sensitive" : false,
-        "value" : "10000"
+        "value" : "11000"
       } ]
     }
   },
