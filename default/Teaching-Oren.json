@@ -909,9 +909,17 @@
             "y" : 131.44851684570312
           },
           "properties" : {
-            "ACI Context Service" : "#{ACI Context Service}"
+            "ACI Context Service" : "03b78da0-4484-3de0-a1a8-fef412382f6e"
           },
-          "propertyDescriptors" : { },
+          "propertyDescriptors" : {
+            "ACI Context Service" : {
+              "displayName" : "ACI Context Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "ACI Context Service",
+              "sensitive" : false
+            }
+          },
           "retriedRelationships" : [ ],
           "retryCount" : 0,
           "runDurationMillis" : 0,
@@ -944,15 +952,22 @@
             "y" : 131.44851684570312
           },
           "properties" : {
-            "ACI Context Service" : "#{ACI Context Service}",
+            "ACI Context Service" : "03b78da0-4484-3de0-a1a8-fef412382f6e",
             "container-queue-size" : "50",
             "request" : "synchronize|purgedatastore|synchronizegroups|collect|view|insert|delete|hold|releasehold|identifiers|update",
-            "IdolLicenseService" : "#{IDOL License Service}",
+            "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
             "sync-actions" : "view",
             "Listening Port" : "#{Listening Port}",
             "Max Request Header Size" : "8192"
           },
           "propertyDescriptors" : {
+            "ACI Context Service" : {
+              "displayName" : "ACI Context Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "ACI Context Service",
+              "sensitive" : false
+            },
             "container-queue-size" : {
               "displayName" : "Container Queue Size",
               "dynamic" : false,
@@ -979,6 +994,13 @@
               "dynamic" : false,
               "identifiesControllerService" : false,
               "name" : "Hostname",
+              "sensitive" : false
+            },
+            "IdolLicenseService" : {
+              "displayName" : "IDOL License Service",
+              "dynamic" : false,
+              "identifiesControllerService" : true,
+              "name" : "IdolLicenseService",
               "sensitive" : false
             },
             "sync-actions" : {
@@ -1157,20 +1179,20 @@
         "componentType" : "CONNECTION",
         "destination" : {
           "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
-          "id" : "40693666-d50e-4e5d-0000-000000000000",
-          "name" : "Synchronize Output",
+          "id" : "847cb04c-6df4-4492-0000-000000000000",
+          "name" : "Failure",
           "type" : "OUTPUT_PORT"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
-        "identifier" : "18e38845-533b-3244-a456-561aae8a53db",
+        "identifier" : "6d905783-3f65-32a4-b0dc-ca4f076ab6d9",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
         "name" : "",
         "partitioningAttribute" : "",
         "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
+        "selectedRelationships" : [ "failed identifiers" ],
         "source" : {
           "comments" : "",
           "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
@@ -1178,7 +1200,7 @@
           "name" : "GetWeb",
           "type" : "PROCESSOR"
         },
-        "zIndex" : 3
+        "zIndex" : 2
       }, {
         "backPressureDataSizeThreshold" : "5 GB",
         "backPressureObjectThreshold" : 10000,
@@ -1218,20 +1240,20 @@
         "componentType" : "CONNECTION",
         "destination" : {
           "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
-          "id" : "847cb04c-6df4-4492-0000-000000000000",
-          "name" : "Failure",
+          "id" : "40693666-d50e-4e5d-0000-000000000000",
+          "name" : "Synchronize Output",
           "type" : "OUTPUT_PORT"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
-        "identifier" : "6d905783-3f65-32a4-b0dc-ca4f076ab6d9",
+        "identifier" : "18e38845-533b-3244-a456-561aae8a53db",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
         "name" : "",
         "partitioningAttribute" : "",
         "prioritizers" : [ ],
-        "selectedRelationships" : [ "failed identifiers" ],
+        "selectedRelationships" : [ "success" ],
         "source" : {
           "comments" : "",
           "groupId" : "a5247b69-3a86-33d7-b035-6f36a41f2785",
@@ -1239,7 +1261,7 @@
           "name" : "GetWeb",
           "type" : "PROCESSOR"
         },
-        "zIndex" : 2
+        "zIndex" : 3
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -3437,35 +3459,6 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
-          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-          "id" : "12df15b2-291f-3d0e-bc52-db28bea3ef39",
-          "name" : "Outgoing",
-          "type" : "OUTPUT_PORT"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-        "identifier" : "5cf7b399-6821-39ce-8a7c-77dc559fcb08",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
-          "id" : "3f337ad6-0421-3b6f-94e2-a29adc787c4f",
-          "name" : "KeyViewFilterDocument",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "5 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
           "comments" : "",
           "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
           "id" : "8f80fd5a-888d-3f0b-ad4c-0cd2b227db40",
@@ -3488,6 +3481,35 @@
           "id" : "99d1b13f-9121-36f0-9bb5-940d339ea9e7",
           "name" : "Funnel",
           "type" : "FUNNEL"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+          "id" : "12df15b2-291f-3d0e-bc52-db28bea3ef39",
+          "name" : "Outgoing",
+          "type" : "OUTPUT_PORT"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+        "identifier" : "5cf7b399-6821-39ce-8a7c-77dc559fcb08",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "c6e38287-bf15-3ae8-8878-8844f5a55af3",
+          "id" : "3f337ad6-0421-3b6f-94e2-a29adc787c4f",
+          "name" : "KeyViewFilterDocument",
+          "type" : "PROCESSOR"
         },
         "zIndex" : 0
       }, {
@@ -4123,36 +4145,6 @@
         "destination" : {
           "comments" : "",
           "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-          "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
-          "name" : "Vectorize",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-        "identifier" : "50ef7dfa-2861-3c60-85ff-9bc1d6e7302e",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "Vectorize" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
-          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
-          "name" : "RouteOnAttribute",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "5 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
           "id" : "89b5c389-f1af-3da0-ae51-aafc16c51189",
           "name" : "Funnel",
           "type" : "FUNNEL"
@@ -4172,6 +4164,36 @@
           "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
           "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
           "name" : "Vectorize",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "5 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "244e722c-f22d-3565-b6cc-19fc3dfb3f5a",
+          "name" : "Vectorize",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+        "identifier" : "50ef7dfa-2861-3c60-85ff-9bc1d6e7302e",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "Vectorize" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "747074ca-cdbf-3c86-a3e3-07a695e3065d",
+          "id" : "c8bf694f-51ac-3fe0-ab86-c0a1c9fe1119",
+          "name" : "RouteOnAttribute",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -4317,8 +4339,8 @@
           "y" : 80.0
         },
         "properties" : {
-          "Vectorize" : "${vectorize:equals('true')}",
-          "Do Not Vectorize" : "${vectorize:equals('false')}",
+          "Vectorize" : "${vectorize:equals('True')}",
+          "Do Not Vectorize" : "${vectorize:equals('False')}",
           "Routing Strategy" : "Route to Property name"
         },
         "propertyDescriptors" : {
@@ -4633,7 +4655,92 @@
         },
         "zIndex" : 0
       } ],
-      "controllerServices" : [ ],
+      "controllerServices" : [ {
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "idol-nifi-framework",
+          "group" : "idol.nifi",
+          "version" : "25.4.1-nifi2"
+        },
+        "comments" : "",
+        "componentType" : "CONTROLLER_SERVICE",
+        "controllerServiceApis" : [ {
+          "bundle" : {
+            "artifact" : "idol-nifi-framework-api",
+            "group" : "idol.nifi",
+            "version" : "25.4.1-nifi2"
+          },
+          "type" : "idol.nifi.service.IdolSslConfigService"
+        } ],
+        "groupIdentifier" : "59175a1f-84d7-324b-bc24-90d7511daa26",
+        "identifier" : "ddb71354-d4bc-3146-ab56-100de47fc642",
+        "name" : "IdolSslConfigServiceImpl",
+        "properties" : {
+          "CheckCommonName" : "true",
+          "CheckCertificate" : "true",
+          "Method" : "Negotiate"
+        },
+        "propertyDescriptors" : {
+          "CheckCommonName" : {
+            "displayName" : "Check common name",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CheckCommonName",
+            "sensitive" : false
+          },
+          "Private key" : {
+            "displayName" : "Private key",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Private key",
+            "sensitive" : true
+          },
+          "CipherSuite" : {
+            "displayName" : "Cipher suite",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CipherSuite",
+            "sensitive" : false
+          },
+          "Private key password" : {
+            "displayName" : "Private key password",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Private key password",
+            "sensitive" : true
+          },
+          "CheckCertificate" : {
+            "displayName" : "Check certificate",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "CheckCertificate",
+            "sensitive" : false
+          },
+          "Method" : {
+            "displayName" : "Method",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Method",
+            "sensitive" : false
+          },
+          "AuthorityCertificates" : {
+            "displayName" : "Authority certificates",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "AuthorityCertificates",
+            "sensitive" : false
+          },
+          "Certificate" : {
+            "displayName" : "Certificate",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Certificate",
+            "sensitive" : false
+          }
+        },
+        "scheduledState" : "DISABLED",
+        "type" : "idol.nifi.service.IdolSslConfigServiceImpl"
+      } ],
       "defaultBackPressureDataSizeThreshold" : "5 GB",
       "defaultBackPressureObjectThreshold" : 10000,
       "defaultFlowFileExpiration" : "0 sec",
@@ -4772,17 +4879,18 @@
           "y" : -64.0
         },
         "properties" : {
+          "SSLConfigService" : "ddb71354-d4bc-3146-ab56-100de47fc642",
           "BatchSize" : "100",
           "CompressIndexFiles" : "false",
           "UseXmlIndexing" : "false",
-          "Port" : "11000",
+          "Port" : "9100",
           "ReplaceAllRefs" : "false",
-          "IdolLicenseService" : "#{Idol License Service1}",
-          "Host" : "localhost",
+          "IdolLicenseService" : "310c538f-3b5e-3c23-ae0c-e8b22766e907",
+          "Host" : "idol-docker-host",
           "IndexOverSocket" : "true",
           "IdxUseXmlSafeFieldValues" : "false",
           "KeepExisting" : "false",
-          "IndexInterval" : "5 min",
+          "IndexInterval" : "1 second",
           "CreateDatabase" : "false",
           "XmlDocumentTag" : "DOCUMENT",
           "XmlRootTag" : "DOCUMENTS"
@@ -4842,6 +4950,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "ReplaceAllRefs",
+            "sensitive" : false
+          },
+          "IdolLicenseService" : {
+            "displayName" : "Idol License Service",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "IdolLicenseService",
             "sensitive" : false
           },
           "Host" : {
@@ -4983,13 +5098,13 @@
         "name" : "License Server",
         "provided" : false,
         "sensitive" : false,
-        "value" : "26e551fe-cce9-32c7-898b-b7760645e2f0"
+        "value" : "9acc042e-687f-358f-a86c-eefd94c6ac60"
       }, {
         "description" : "",
         "name" : "ACI Handler",
         "provided" : false,
         "sensitive" : false,
-        "value" : "118bacce-6797-34bd-0ada-a540efbf4754"
+        "value" : "31ad83d6-9753-39ca-cb11-2553f4f98921"
       } ]
     },
     "Connector ACI Server Parameters" : {
