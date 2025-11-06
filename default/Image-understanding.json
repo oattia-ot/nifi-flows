@@ -1,4 +1,18 @@
 {
+  "externalControllerServices" : {
+    "8f80f118-7015-3417-89af-b0bd57b7c997" : {
+      "identifier" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+      "name" : "IdolLicenseServiceImpl"
+    },
+    "9a56995c-7c8a-3d68-a0fe-47802a489225" : {
+      "identifier" : "9a56995c-7c8a-3d68-a0fe-47802a489225",
+      "name" : "KeyViewFilterServiceImpl"
+    },
+    "f1cd49b3-e9e9-334d-9037-830107939b75" : {
+      "identifier" : "f1cd49b3-e9e9-334d-9037-830107939b75",
+      "name" : "IdolLicenseServiceImpl"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1762468683417,
     "description" : "Baseline",
@@ -7,5 +21,2196 @@
     "name" : "Image understanding",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "05592f93-86ef-3016-983b-74e4cdcfdae7",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c16e5e0c-5bc2-3f2a-9d29-88a2ce4014f4",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4934c674-4e15-3889-bce1-2184ecdd6813",
+        "name" : "KeyViewExportToHtml",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c819e21c-a520-361d-94e9-5cfaa47f1e58",
+        "name" : "Image Understanding",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4595d932-aa88-393e-9983-4256514d7c48",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "rendered" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bd63be27-ff04-3fb8-8e1a-d2b668caa96a",
+        "name" : "RenderHTML",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "8e309021-b9ba-3201-9c24-f68b551bd155",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "b1fb1f1e-42e9-33a5-8ef4-584e85401abd",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bd63be27-ff04-3fb8-8e1a-d2b668caa96a",
+        "name" : "RenderHTML",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d5abce03-ce9f-32cb-813f-8aaad5c59e81",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "81ed3cb2-757c-35e9-9b40-84019de3a0d2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bd63be27-ff04-3fb8-8e1a-d2b668caa96a",
+        "name" : "RenderHTML",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "50913bb8-71bd-326d-babf-b1a6340dc84f",
+        "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "96271250-89da-34ed-9d6d-1545e88ad20a",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "flow-contents-group",
+        "id" : "e328271f-280a-376a-9d4d-b80def5f1561",
+        "name" : "Incoming",
+        "type" : "INPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a6e4b516-abd1-3fc5-b240-3e6ddd674cd6",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2163e928-9f5b-3995-bd01-a05e7a7dbf47",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bfb4e392-c6c8-3498-8ba4-f8cc585db44c",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "cf706b07-08c6-32b5-8f1b-8ff7bafbcacf",
+        "name" : "KeyViewFilterDocument",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "841ce6f0-2e38-3fd7-8348-70154ec479d1",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "50913bb8-71bd-326d-babf-b1a6340dc84f",
+        "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "fd7ca2f2-796f-3b34-9731-996b4125e985",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "79fa5ce9-7ca7-3317-8ffc-7ddb16919979",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4934c674-4e15-3889-bce1-2184ecdd6813",
+        "name" : "KeyViewExportToHtml",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4934c674-4e15-3889-bce1-2184ecdd6813",
+        "name" : "KeyViewExportToHtml",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "fa93ba51-5d49-37b1-90af-1bb047bf62b0",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "cf706b07-08c6-32b5-8f1b-8ff7bafbcacf",
+        "name" : "KeyViewFilterDocument",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "975b450a-55da-3b6c-80f6-1a75d461b8bf",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6228c6e2-428e-3bf8-b4d1-7f08cc470de8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c819e21c-a520-361d-94e9-5cfaa47f1e58",
+        "name" : "Image Understanding",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4c3aae5b-b1fa-3433-a617-f46bbb71c0fa",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ab6dc514-8353-366a-ae1a-8fc0235f8a80",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "79190996-7125-3fd0-82de-d586dbfa2514",
+        "name" : "Eduction",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bd63be27-ff04-3fb8-8e1a-d2b668caa96a",
+        "name" : "RenderHTML",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c6353e21-f287-39b6-b535-c9b651473be2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "exported" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "4934c674-4e15-3889-bce1-2184ecdd6813",
+        "name" : "KeyViewExportToHtml",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a6e4b516-abd1-3fc5-b240-3e6ddd674cd6",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d8418b2e-ced5-3abb-89cc-f626dc3a3f29",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "cf706b07-08c6-32b5-8f1b-8ff7bafbcacf",
+        "name" : "KeyViewFilterDocument",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "bfb4e392-c6c8-3498-8ba4-f8cc585db44c",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bc045755-6b1a-38f8-b793-96c3646dae26",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "50913bb8-71bd-326d-babf-b1a6340dc84f",
+        "name" : "KeyViewExtractFiles",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "groupId" : "flow-contents-group",
+        "id" : "2e4175ad-29b5-340d-8a19-07896670dcb8",
+        "name" : "Outgoing",
+        "type" : "OUTPUT_PORT"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "16a1ba50-e8f9-3e8e-87a4-2b244f4892b2",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "79190996-7125-3fd0-82de-d586dbfa2514",
+        "name" : "Eduction",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "5 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "79190996-7125-3fd0-82de-d586dbfa2514",
+        "name" : "Eduction",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "345fd31d-ded8-3ae8-b97f-d18ef1884731",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c819e21c-a520-361d-94e9-5cfaa47f1e58",
+        "name" : "Image Understanding",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "idol-nifi-framework-api",
+          "group" : "idol.nifi",
+          "version" : "25.1.0-nifi2"
+        },
+        "type" : "idol.nifi.service.KeyViewExportService"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "092f0ce7-055d-34e7-b7b6-35c014848865",
+      "name" : "KeyViewExportServiceImpl",
+      "properties" : {
+        "FileStorageDirectory" : "${idol.repository.files.storage.dir}",
+        "KeyViewDirectory" : "${idol.repository.resources.dir}/KeyViewSDK"
+      },
+      "propertyDescriptors" : {
+        "FileStorageDirectory" : {
+          "displayName" : "File storage directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FileStorageDirectory",
+          "sensitive" : false
+        },
+        "KeyViewDirectory" : {
+          "displayName" : "KeyView directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "KeyViewDirectory",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "idol.nifi.service.KeyViewExportServiceImpl"
+    } ],
+    "defaultBackPressureDataSizeThreshold" : "5 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : {
+      "8f80f118-7015-3417-89af-b0bd57b7c997" : {
+        "identifier" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "name" : "IdolLicenseServiceImpl"
+      },
+      "9a56995c-7c8a-3d68-a0fe-47802a489225" : {
+        "identifier" : "9a56995c-7c8a-3d68-a0fe-47802a489225",
+        "name" : "KeyViewFilterServiceImpl"
+      },
+      "f1cd49b3-e9e9-334d-9037-830107939b75" : {
+        "identifier" : "f1cd49b3-e9e9-334d-9037-830107939b75",
+        "name" : "IdolLicenseServiceImpl"
+      }
+    },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "fd7ca2f2-796f-3b34-9731-996b4125e985",
+      "position" : {
+        "x" : -1048.0,
+        "y" : 368.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4c3aae5b-b1fa-3433-a617-f46bbb71c0fa",
+      "position" : {
+        "x" : -1056.0,
+        "y" : 976.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d5abce03-ce9f-32cb-813f-8aaad5c59e81",
+      "position" : {
+        "x" : -1056.0,
+        "y" : 568.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "a6e4b516-abd1-3fc5-b240-3e6ddd674cd6",
+      "position" : {
+        "x" : -1040.0,
+        "y" : 144.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bfb4e392-c6c8-3498-8ba4-f8cc585db44c",
+      "position" : {
+        "x" : -1040.0,
+        "y" : -40.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8e309021-b9ba-3201-9c24-f68b551bd155",
+      "position" : {
+        "x" : -8.0,
+        "y" : 568.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "05592f93-86ef-3016-983b-74e4cdcfdae7",
+      "position" : {
+        "x" : -32.0,
+        "y" : 344.0
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "975b450a-55da-3b6c-80f6-1a75d461b8bf",
+      "position" : {
+        "x" : -1056.0,
+        "y" : 768.0
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "INPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e328271f-280a-376a-9d4d-b80def5f1561",
+      "name" : "Incoming",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -632.0,
+        "y" : -208.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "INPUT_PORT"
+    } ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Image understanding from PDF",
+    "outputPorts" : [ {
+      "allowRemoteAccess" : false,
+      "componentType" : "OUTPUT_PORT",
+      "concurrentlySchedulableTaskCount" : 1,
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2e4175ad-29b5-340d-8a19-07896670dcb8",
+      "name" : "Outgoing",
+      "portFunction" : "STANDARD",
+      "position" : {
+        "x" : -632.0,
+        "y" : 1112.0
+      },
+      "scheduledState" : "ENABLED",
+      "type" : "OUTPUT_PORT"
+    } ],
+    "parameterContextName" : "POC context",
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "subfile" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "50913bb8-71bd-326d-babf-b1a6340dc84f",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "KeyViewExtractFiles",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : -88.0
+      },
+      "properties" : {
+        "KeyViewFilterService" : "9a56995c-7c8a-3d68-a0fe-47802a489225",
+        "UseLocalTempFile" : "false",
+        "ExtractedFilePartType" : "match_input",
+        "MergeMails" : "false",
+        "InheritedFieldsRegex" : ".*",
+        "IdolLicenseService" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "ExtractNewFlowFiles" : "true",
+        "NotInheritedFieldsRegex" : ""
+      },
+      "propertyDescriptors" : {
+        "KeyViewFilterService" : {
+          "displayName" : "KeyView Filter Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "KeyViewFilterService",
+          "sensitive" : false
+        },
+        "UseLocalTempFile" : {
+          "displayName" : "Use Local Temp File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "UseLocalTempFile",
+          "sensitive" : false
+        },
+        "ExtractedFilePartType" : {
+          "displayName" : "Extracted File Part Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ExtractedFilePartType",
+          "sensitive" : false
+        },
+        "MergeMails" : {
+          "displayName" : "Merge mails",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MergeMails",
+          "sensitive" : false
+        },
+        "DocumentRegistryService" : {
+          "displayName" : "Document Registry Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "DocumentRegistryService",
+          "sensitive" : false
+        },
+        "InheritedFieldsRegex" : {
+          "displayName" : "Inherited Fields Regex",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "InheritedFieldsRegex",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "Idol License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "ExtractNewFlowFiles" : {
+          "displayName" : "Create new FlowFiles from sub-files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ExtractNewFlowFiles",
+          "sensitive" : false
+        },
+        "NotInheritedFieldsRegex" : {
+          "displayName" : "Not Inherited Fields Regex",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "NotInheritedFieldsRegex",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.KeyViewExtractFiles",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4934c674-4e15-3889-bce1-2184ecdd6813",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "KeyViewExportToHtml",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : 320.0
+      },
+      "properties" : {
+        "SupportRFC1942Cols" : "false",
+        "RemoveEmptyColumns" : "false",
+        "RowsBeforeSplit" : "50",
+        "RemoveEmptyRows" : "false",
+        "IdolLicenseService" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "RasterGraphicType" : "JPEG",
+        "SupportCellSpan" : "true",
+        "OutputLanguageID" : "UNKNOWN",
+        "MainBottomHtml" : "</body>\n</html>",
+        "SupportFontFace" : "true",
+        "SupportRowSpan" : "true",
+        "SupportColumnWidth" : "true",
+        "MaxMemUsage" : "0",
+        "DisplayRelativeFontSize" : "true",
+        "VectorGraphicType" : "JPEG",
+        "CompressionQuality" : "100",
+        "UseDocumentColors" : "true",
+        "GenerateURLs" : "true",
+        "SupportColumnHeadings" : "true",
+        "TabsToTables" : "false",
+        "KeyViewExportService" : "092f0ce7-055d-34e7-b7b6-35c014848865",
+        "UseDocumentFontInfo" : "true",
+        "RasterizeFiles" : "true",
+        "TableBorder" : "BaseOnDocument",
+        "ForceSourceCharSet" : "false",
+        "SupportRowHeadings" : "true",
+        "ForceOutputCharSet" : "true",
+        "VectorToRasterResY" : "0",
+        "VectorToRasterResX" : "0",
+        "MainTopHtml" : "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\">\n<html>\n<head>\n<title>$SUMMARY01</title>\n<meta name=\"Author\" content=\"$SUMMARY03\" />\n<meta http-equiv=\"content-type\" content=\"text/html; charset=$CHARSET\" />\n</head>\n<body>",
+        "TableBorderWidth" : "0",
+        "EnableEmptyRows" : "true",
+        "OutputCharSet" : "UTF8",
+        "SourceCharSet" : "UTF8",
+        "NBSPEmptyCells" : "false",
+        "StyleSheetType" : "CSS_INLINE"
+      },
+      "propertyDescriptors" : {
+        "SupportRFC1942Cols" : {
+          "displayName" : "Support RFC1942 Columns",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportRFC1942Cols",
+          "sensitive" : false
+        },
+        "RemoveEmptyColumns" : {
+          "displayName" : "Remove Empty Columns",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RemoveEmptyColumns",
+          "sensitive" : false
+        },
+        "RowsBeforeSplit" : {
+          "displayName" : "Rows Before Split",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RowsBeforeSplit",
+          "sensitive" : false
+        },
+        "RemoveEmptyRows" : {
+          "displayName" : "Remove Empty Rows",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RemoveEmptyRows",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "Idol License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "RasterGraphicType" : {
+          "displayName" : "Raster Graphic Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RasterGraphicType",
+          "sensitive" : false
+        },
+        "SupportCellSpan" : {
+          "displayName" : "Support Cell Span",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportCellSpan",
+          "sensitive" : false
+        },
+        "OutputLanguageID" : {
+          "displayName" : "Output Language ID",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "OutputLanguageID",
+          "sensitive" : false
+        },
+        "MainBottomHtml" : {
+          "displayName" : "Main Bottom HTML Template",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MainBottomHtml",
+          "sensitive" : false
+        },
+        "SupportFontFace" : {
+          "displayName" : "Support Font Face",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportFontFace",
+          "sensitive" : false
+        },
+        "SupportRowSpan" : {
+          "displayName" : "Support Row Span",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportRowSpan",
+          "sensitive" : false
+        },
+        "SupportColumnWidth" : {
+          "displayName" : "Support Column Width",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportColumnWidth",
+          "sensitive" : false
+        },
+        "MaxMemUsage" : {
+          "displayName" : "Max Memory Usage",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxMemUsage",
+          "sensitive" : false
+        },
+        "DisplayRelativeFontSize" : {
+          "displayName" : "Display Relative Font Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "DisplayRelativeFontSize",
+          "sensitive" : false
+        },
+        "VectorGraphicType" : {
+          "displayName" : "Vector Graphic Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "VectorGraphicType",
+          "sensitive" : false
+        },
+        "CompressionQuality" : {
+          "displayName" : "Compression Quality",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CompressionQuality",
+          "sensitive" : false
+        },
+        "UseDocumentColors" : {
+          "displayName" : "Use Document Colors",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "UseDocumentColors",
+          "sensitive" : false
+        },
+        "GenerateURLs" : {
+          "displayName" : "Generate URLs",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "GenerateURLs",
+          "sensitive" : false
+        },
+        "SupportColumnHeadings" : {
+          "displayName" : "Support Column Headings",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportColumnHeadings",
+          "sensitive" : false
+        },
+        "TabsToTables" : {
+          "displayName" : "Tabs To Tables",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TabsToTables",
+          "sensitive" : false
+        },
+        "KeyViewExportService" : {
+          "displayName" : "KeyView Export Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "KeyViewExportService",
+          "sensitive" : false
+        },
+        "UseDocumentFontInfo" : {
+          "displayName" : "Use Document Font Info",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "UseDocumentFontInfo",
+          "sensitive" : false
+        },
+        "RasterizeFiles" : {
+          "displayName" : "Rasterize Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RasterizeFiles",
+          "sensitive" : false
+        },
+        "TableBorder" : {
+          "displayName" : "Table Border",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TableBorder",
+          "sensitive" : false
+        },
+        "ForceSourceCharSet" : {
+          "displayName" : "Force Source Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ForceSourceCharSet",
+          "sensitive" : false
+        },
+        "SupportRowHeadings" : {
+          "displayName" : "Support Row Headings",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SupportRowHeadings",
+          "sensitive" : false
+        },
+        "ForceOutputCharSet" : {
+          "displayName" : "Force Output Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ForceOutputCharSet",
+          "sensitive" : false
+        },
+        "VectorToRasterResY" : {
+          "displayName" : "Vector To Raster Resolution Y",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "VectorToRasterResY",
+          "sensitive" : false
+        },
+        "VectorToRasterResX" : {
+          "displayName" : "Vector To Raster Resolution X",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "VectorToRasterResX",
+          "sensitive" : false
+        },
+        "MainTopHtml" : {
+          "displayName" : "Main Top HTML Template",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MainTopHtml",
+          "sensitive" : false
+        },
+        "TableBorderWidth" : {
+          "displayName" : "Table Border Width",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TableBorderWidth",
+          "sensitive" : false
+        },
+        "EnableEmptyRows" : {
+          "displayName" : "Enable Empty Rows",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "EnableEmptyRows",
+          "sensitive" : false
+        },
+        "OutputCharSet" : {
+          "displayName" : "Output Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "OutputCharSet",
+          "sensitive" : false
+        },
+        "SourceCharSet" : {
+          "displayName" : "Source Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SourceCharSet",
+          "sensitive" : false
+        },
+        "NBSPEmptyCells" : {
+          "displayName" : "NBSP Empty Cells",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "NBSPEmptyCells",
+          "sensitive" : false
+        },
+        "StyleSheetType" : {
+          "displayName" : "Style Sheet Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "StyleSheetType",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.KeyViewExportToHtml",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c819e21c-a520-361d-94e9-5cfaa47f1e58",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Image Understanding",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : 728.0
+      },
+      "properties" : {
+        "PythonScriptFunction" : "handler",
+        "GrokApiKey" : "....",
+        "IdolLicenseService" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "RouteTo" : "success",
+        "PythonScriptFile" : "/python/grok_image_describer_idol_nifi.py",
+        "GrokModel" : "grok-4-fast-reasoning"
+      },
+      "propertyDescriptors" : {
+        "AdditionalOutputRelationships" : {
+          "displayName" : "Additional output relationships",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AdditionalOutputRelationships",
+          "sensitive" : false
+        },
+        "PythonScriptFunction" : {
+          "displayName" : "Python script function",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PythonScriptFunction",
+          "sensitive" : false
+        },
+        "RouteUntransferredTo" : {
+          "displayName" : "Route untransferred to",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RouteUntransferredTo",
+          "sensitive" : false
+        },
+        "GrokApiKey" : {
+          "displayName" : "GrokApiKey",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "GrokApiKey",
+          "sensitive" : false
+        },
+        "RouteReturnedTo" : {
+          "displayName" : "Route returned to",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RouteReturnedTo",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "Idol License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "RouteTo" : {
+          "displayName" : "Route to",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RouteTo",
+          "sensitive" : false
+        },
+        "PythonScriptFile" : {
+          "displayName" : "Python script file",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PythonScriptFile",
+          "sensitive" : false
+        },
+        "GrokModel" : {
+          "displayName" : "GrokModel",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "GrokModel",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.ExecuteDocumentPython",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bd63be27-ff04-3fb8-8e1a-d2b668caa96a",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "RenderHTML",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : 528.0
+      },
+      "properties" : {
+        "RenderFormat" : "png",
+        "FailOnScriptTimeout" : "false",
+        "WKOOPPath" : "${idol.repository.resources.dir}/WKOOP/WKOOP.exe",
+        "ReadabilityFile" : "${idol.repository.resources.dir}/readability.js",
+        "AllowNavigations" : "false",
+        "ReadabilityOptionsFile" : "${idol.repository.resources.dir}/readabilityOptions.json",
+        "SSLCheckCertificate" : "false",
+        "IdolLicenseService" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "MetadataIncludeTextPositions" : "false",
+        "Url" : "data:text/html,",
+        "CssUnselectOnFailure" : "SelectNone",
+        "RssXSLFilePath" : "${idol.repository.resources.dir}/RSSTransform.xsl",
+        "EnableJavascriptConsoleLogging" : "false",
+        "MaxRenderHeight" : "25000",
+        "UserAgent" : "Autn-WKOOP",
+        "PageLoadTimeout" : "40s",
+        "FullPageRender" : "true",
+        "PageTimeout" : "120s",
+        "DisableJavascript" : "false",
+        "MaxRedirects" : "25",
+        "ClippingMode" : "NONE",
+        "ReadabilityFailOnError" : "false",
+        "ScriptInactivityTimeout" : "0.5s",
+        "MaxWaitForScripts" : "30s",
+        "RenderQuality" : "100",
+        "CssSelectOnFailure" : "SelectAll",
+        "MaxRenderWidth" : "2500"
+      },
+      "propertyDescriptors" : {
+        "RenderFormat" : {
+          "displayName" : "Render Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RenderFormat",
+          "sensitive" : false
+        },
+        "FailOnScriptTimeout" : {
+          "displayName" : "Script timeout fails page",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FailOnScriptTimeout",
+          "sensitive" : false
+        },
+        "WKOOPPath" : {
+          "displayName" : "WKOOP Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "WKOOPPath",
+          "sensitive" : false
+        },
+        "CustomHeaderNames" : {
+          "displayName" : "Custom header names",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CustomHeaderNames",
+          "sensitive" : false
+        },
+        "ReadabilityFile" : {
+          "displayName" : "Readability file",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ReadabilityFile",
+          "sensitive" : false
+        },
+        "AllowNavigations" : {
+          "displayName" : "Allow Navigations",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AllowNavigations",
+          "sensitive" : false
+        },
+        "ReadabilityOptionsFile" : {
+          "displayName" : "Readability options file",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ReadabilityOptionsFile",
+          "sensitive" : false
+        },
+        "SSLCheckCertificate" : {
+          "displayName" : "SSL check certificate",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SSLCheckCertificate",
+          "sensitive" : false
+        },
+        "CustomJSSections" : {
+          "displayName" : "Custom JavaScript sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CustomJSSections",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "Idol License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "MetadataIncludeTextPositions" : {
+          "displayName" : "MetadataIncludeTextPositions",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MetadataIncludeTextPositions",
+          "sensitive" : false
+        },
+        "ClipPageUsingCssSelect" : {
+          "displayName" : "Clip Page Using Css: Select",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ClipPageUsingCssSelect",
+          "sensitive" : false
+        },
+        "Url" : {
+          "displayName" : "Url",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Url",
+          "sensitive" : false
+        },
+        "ResourceUrlCantHaveRegex" : {
+          "displayName" : "Resource URL cant have regex",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ResourceUrlCantHaveRegex",
+          "sensitive" : false
+        },
+        "CssUnselectOnFailure" : {
+          "displayName" : "Clip CSS unselect on failure",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CssUnselectOnFailure",
+          "sensitive" : false
+        },
+        "MetadataFieldSections" : {
+          "displayName" : "Metadata field sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MetadataFieldSections",
+          "sensitive" : false
+        },
+        "RssXSLFilePath" : {
+          "displayName" : "RSS XSL File Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RssXSLFilePath",
+          "sensitive" : false
+        },
+        "FormsSections" : {
+          "displayName" : "Forms sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FormsSections",
+          "sensitive" : false
+        },
+        "EnableJavascriptConsoleLogging" : {
+          "displayName" : "Custom JavaScript enable logging",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "EnableJavascriptConsoleLogging",
+          "sensitive" : false
+        },
+        "MaxRenderHeight" : {
+          "displayName" : "MaxRenderHeight",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxRenderHeight",
+          "sensitive" : false
+        },
+        "UserAgent" : {
+          "displayName" : "User agent",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "UserAgent",
+          "sensitive" : false
+        },
+        "AuthSections" : {
+          "displayName" : "Authentication sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AuthSections",
+          "sensitive" : false
+        },
+        "PageLoadTimeout" : {
+          "displayName" : "Page load timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PageLoadTimeout",
+          "sensitive" : false
+        },
+        "ResourceUrlMustHaveRegex" : {
+          "displayName" : "Resource URL must have regex",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ResourceUrlMustHaveRegex",
+          "sensitive" : false
+        },
+        "CustomHeaderValues" : {
+          "displayName" : "Custom header values",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CustomHeaderValues",
+          "sensitive" : false
+        },
+        "FullPageRender" : {
+          "displayName" : "Full Page Render",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FullPageRender",
+          "sensitive" : false
+        },
+        "PageTimeout" : {
+          "displayName" : "Page timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PageTimeout",
+          "sensitive" : false
+        },
+        "WaitForStateSections" : {
+          "displayName" : "Wait for state sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "WaitForStateSections",
+          "sensitive" : false
+        },
+        "DisableJavascript" : {
+          "displayName" : "Disable JavaScript",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "DisableJavascript",
+          "sensitive" : false
+        },
+        "ClipPageUsingCssUnselect" : {
+          "displayName" : "Clip Page Using Css: Unselect",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ClipPageUsingCssUnselect",
+          "sensitive" : false
+        },
+        "MaxRedirects" : {
+          "displayName" : "Maximum redirects",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxRedirects",
+          "sensitive" : false
+        },
+        "ClippingMode" : {
+          "displayName" : "ClippingMode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ClippingMode",
+          "sensitive" : false
+        },
+        "ProxyConfigurationService" : {
+          "displayName" : "Proxy Configuration Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "ProxyConfigurationService",
+          "sensitive" : false
+        },
+        "ReadabilityFailOnError" : {
+          "displayName" : "Readability fail on error",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ReadabilityFailOnError",
+          "sensitive" : false
+        },
+        "ErrorPageSections" : {
+          "displayName" : "Error page sections",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ErrorPageSections",
+          "sensitive" : false
+        },
+        "ScriptInactivityTimeout" : {
+          "displayName" : "Script inactivity timeout",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ScriptInactivityTimeout",
+          "sensitive" : false
+        },
+        "BlockingFiltersDirectory" : {
+          "displayName" : "Blocking filters directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "BlockingFiltersDirectory",
+          "sensitive" : false
+        },
+        "MaxWaitForScripts" : {
+          "displayName" : "Script maximum wait time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxWaitForScripts",
+          "sensitive" : false
+        },
+        "RenderQuality" : {
+          "displayName" : "Render Quality",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RenderQuality",
+          "sensitive" : false
+        },
+        "CssSelectOnFailure" : {
+          "displayName" : "Clip CSS select on failure",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CssSelectOnFailure",
+          "sensitive" : false
+        },
+        "MaxRenderWidth" : {
+          "displayName" : "MaxRenderWidth",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxRenderWidth",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.RenderHTML",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "cf706b07-08c6-32b5-8f1b-8ff7bafbcacf",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "KeyViewFilterDocument",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : 104.0
+      },
+      "properties" : {
+        "UseLocalTempFile" : "false",
+        "KvShowDateField" : "false",
+        "ImportHeaderFooter" : "true",
+        "IdolLicenseService" : "8f80f118-7015-3417-89af-b0bd57b7c997",
+        "ExtractTableInfo" : "false",
+        "ExtractContentText" : "true",
+        "ImportExcludeMailHeader" : "false",
+        "PDFSectioning" : "false",
+        "ImportExtractMsg" : "false",
+        "KvSkipEmbeddedFont" : "false",
+        "KeepFormatting" : "false",
+        "KeyviewTimeout" : "420",
+        "KeyViewFilterService" : "9a56995c-7c8a-3d68-a0fe-47802a489225",
+        "HiddenTintedText" : "false",
+        "KvExtractHiddenText" : "false",
+        "FilteredMetadataTarget" : "original_field",
+        "OutputTableInfo" : "false",
+        "ImportExtractMessage" : "false",
+        "DebugMode" : "false",
+        "ExtractFileMetadata" : "true",
+        "RevisionMarks" : "false",
+        "ImportExtractToCText" : "false",
+        "KvNoComments" : "false",
+        "HiddenTintedTextDefault" : "false",
+        "ExtractImages" : "true",
+        "KvShowHiddenText" : "true",
+        "KvLogicalPdf" : "0",
+        "KvShowFileNameField" : "false",
+        "KvLogicalOrder" : "false",
+        "MaxPageMemBytes" : "1048576"
+      },
+      "propertyDescriptors" : {
+        "UseLocalTempFile" : {
+          "displayName" : "Use Local Temp File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "UseLocalTempFile",
+          "sensitive" : false
+        },
+        "KvShowDateField" : {
+          "displayName" : "KvShowDateField",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvShowDateField",
+          "sensitive" : false
+        },
+        "ImportHeaderFooter" : {
+          "displayName" : "ImportHeaderFooter",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ImportHeaderFooter",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "Idol License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "FilterTextFromMetadataXPath" : {
+          "displayName" : "Filter Metadata XPath",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FilterTextFromMetadataXPath",
+          "sensitive" : false
+        },
+        "ExtractTableInfo" : {
+          "displayName" : "ExtractTableInfo",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ExtractTableInfo",
+          "sensitive" : false
+        },
+        "ExtractContentText" : {
+          "displayName" : "Extract content text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ExtractContentText",
+          "sensitive" : false
+        },
+        "ImportExcludeMailHeader" : {
+          "displayName" : "ImportExcludeMailHeader",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ImportExcludeMailHeader",
+          "sensitive" : false
+        },
+        "PDFSectioning" : {
+          "displayName" : "PDF Sectioning",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PDFSectioning",
+          "sensitive" : false
+        },
+        "ImportExtractMsg" : {
+          "displayName" : "ImportExtractMsg",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ImportExtractMsg",
+          "sensitive" : false
+        },
+        "KvSkipEmbeddedFont" : {
+          "displayName" : "KvSkipEmbeddedFont",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvSkipEmbeddedFont",
+          "sensitive" : false
+        },
+        "KeepFormatting" : {
+          "displayName" : "KeepFormatting",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KeepFormatting",
+          "sensitive" : false
+        },
+        "KeyviewTimeout" : {
+          "displayName" : "KeyviewTimeout",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KeyviewTimeout",
+          "sensitive" : false
+        },
+        "KeyViewFilterService" : {
+          "displayName" : "KeyView Filter Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "KeyViewFilterService",
+          "sensitive" : false
+        },
+        "HiddenTintedText" : {
+          "displayName" : "Hidden Tinted Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HiddenTintedText",
+          "sensitive" : false
+        },
+        "KvExtractHiddenText" : {
+          "displayName" : "KvExtractHiddenText",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvExtractHiddenText",
+          "sensitive" : false
+        },
+        "FilteredMetadataTarget" : {
+          "displayName" : "Filtered Metadata Target",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FilteredMetadataTarget",
+          "sensitive" : false
+        },
+        "OutputTableInfo" : {
+          "displayName" : "Output Table Info",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "OutputTableInfo",
+          "sensitive" : false
+        },
+        "ImportExtractMessage" : {
+          "displayName" : "ImportExtractMessage",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ImportExtractMessage",
+          "sensitive" : false
+        },
+        "DebugMode" : {
+          "displayName" : "DebugMode",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "DebugMode",
+          "sensitive" : false
+        },
+        "ExtractFileMetadata" : {
+          "displayName" : "Extract file metadata",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ExtractFileMetadata",
+          "sensitive" : false
+        },
+        "RevisionMarks" : {
+          "displayName" : "Revision Marks",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RevisionMarks",
+          "sensitive" : false
+        },
+        "ImportExtractToCText" : {
+          "displayName" : "Import Extract Table of Contents Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ImportExtractToCText",
+          "sensitive" : false
+        },
+        "KvNoComments" : {
+          "displayName" : "KvNoComments",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvNoComments",
+          "sensitive" : false
+        },
+        "HiddenTintedTextDefault" : {
+          "displayName" : "Hidden Tinted Text Default",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HiddenTintedTextDefault",
+          "sensitive" : false
+        },
+        "FilterTextFromHtmlMetadataXPath" : {
+          "displayName" : "Filter HTML Metadata XPath",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "FilterTextFromHtmlMetadataXPath",
+          "sensitive" : false
+        },
+        "ExtractImages" : {
+          "displayName" : "ExtractImages",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "ExtractImages",
+          "sensitive" : false
+        },
+        "KvShowHiddenText" : {
+          "displayName" : "KvShowHiddenText",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvShowHiddenText",
+          "sensitive" : false
+        },
+        "KvLogicalPdf" : {
+          "displayName" : "KvLogicalPdf",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvLogicalPdf",
+          "sensitive" : false
+        },
+        "KvShowFileNameField" : {
+          "displayName" : "KvShowFileNameField",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvShowFileNameField",
+          "sensitive" : false
+        },
+        "KvLogicalOrder" : {
+          "displayName" : "KvLogicalOrder",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "KvLogicalOrder",
+          "sensitive" : false
+        },
+        "MaxPageMemBytes" : {
+          "displayName" : "Max Page Memory Bytes",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxPageMemBytes",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.KeyViewFilterDocument",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "ERROR",
+      "bundle" : {
+        "artifact" : "idol-nifi-framework",
+        "group" : "idol.nifi",
+        "version" : "25.1.0-nifi2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "79190996-7125-3fd0-82de-d586dbfa2514",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Eduction",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -688.0,
+        "y" : 936.0
+      },
+      "properties" : {
+        "EnableComponents" : "false",
+        "RedactionType" : "Replace",
+        "SearchFields" : "DOCUMENT_DRECONTENT",
+        "MatchWholeWord" : "true",
+        "IdolLicenseService" : "f1cd49b3-e9e9-334d-9037-830107939b75",
+        "MaxEntityLength" : "256",
+        "CountOutput" : "false",
+        "InlineResults" : "false",
+        "ColumnSpanAttribute" : "COLSPAN",
+        "SimpleOutput" : "false",
+        "ColumnSpanFieldPath" : "span",
+        "internal:BuiltinEntities" : "Standard/medical_condition.ecr|medical/disability/social_security/engus\nStandard/medical_condition.ecr|medical/disease_condition\nStandard/medical_condition.ecr|medical/lifestyle\nStandard/medical_drug.ecr|drug/brand\nStandard/medical_drug.ecr|drug/generic\nStandard/medical_drug.ecr|drug/medication\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ak/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/al/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/all/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ar/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/az/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ca/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/co/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ct/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/dc/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/de/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/fl/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ga/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/hi/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ia/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/id/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/il/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/in/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ks/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ky/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/la/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ma/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/md/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/me/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/mi/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/mn/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/mo/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ms/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/mt/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nc/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nd/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ne/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nh/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nj/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nm/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/nv/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ny/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/oh/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ok/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/or/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/pa/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/pr/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ri/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/sc/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/sd/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/tn/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/tx/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/ut/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/va/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/vt/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/wa/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/wi/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/wv/engus\nStandard/medical_healthcare_engus.ecr|healthcare/provider/wy/engus\nStandard/medical_procedure.ecr|medical/blood_test\nStandard/medical_procedure.ecr|medical/lab_test\nStandard/medical_procedure.ecr|medical/specialty\nStandard/medical_procedure.ecr|medical/surgical_procedure",
+        "EnableUniqueMatches" : "false",
+        "AllowOverlaps" : "false",
+        "NonGreedyMatch" : "false",
+        "CaseNormalization" : "None",
+        "TokenWithPunctuation" : "false",
+        "MaxSearchHeaderRow" : "1",
+        "CaseNormalizationBehavior" : "Default",
+        "PostProcessThreshold" : "0.000",
+        "RedactedOutput" : "false",
+        "TableCellValuePath" : "\".\",\"region/text\"",
+        "MatchCase" : "true",
+        "AllowMultipleResults" : "No"
+      },
+      "propertyDescriptors" : {
+        "Entity" : {
+          "displayName" : "Entity",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Entity",
+          "sensitive" : false
+        },
+        "CJKNormalization" : {
+          "displayName" : "CJK Normalization",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CJKNormalization",
+          "sensitive" : false
+        },
+        "EnableComponents" : {
+          "displayName" : "Enable Components",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "EnableComponents",
+          "sensitive" : false
+        },
+        "RedactionType" : {
+          "displayName" : "Redaction Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RedactionType",
+          "sensitive" : false
+        },
+        "SearchFields" : {
+          "displayName" : "Search Fields",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SearchFields",
+          "sensitive" : false
+        },
+        "MatchWholeWord" : {
+          "displayName" : "Match Whole Word",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MatchWholeWord",
+          "sensitive" : false
+        },
+        "TableCellPath" : {
+          "displayName" : "Table Cell Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TableCellPath",
+          "sensitive" : false
+        },
+        "PreFilterTask" : {
+          "displayName" : "Pre Filtering Tasks",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PreFilterTask",
+          "sensitive" : false
+        },
+        "IdolLicenseService" : {
+          "displayName" : "IDOL License Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "IdolLicenseService",
+          "sensitive" : false
+        },
+        "RedactionOutputString" : {
+          "displayName" : "Redaction Output String",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RedactionOutputString",
+          "sensitive" : false
+        },
+        "MaxEntityLength" : {
+          "displayName" : "Max Entity Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxEntityLength",
+          "sensitive" : false
+        },
+        "HeaderEntity" : {
+          "displayName" : "Table Header Entity",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HeaderEntity",
+          "sensitive" : false
+        },
+        "CountOutput" : {
+          "displayName" : "Count Output",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CountOutput",
+          "sensitive" : false
+        },
+        "InlineResults" : {
+          "displayName" : "Inline Results",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "InlineResults",
+          "sensitive" : false
+        },
+        "ColumnSpanAttribute" : {
+          "displayName" : "Table Cell Column Span Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ColumnSpanAttribute",
+          "sensitive" : false
+        },
+        "SimpleOutput" : {
+          "displayName" : "Simple Output",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SimpleOutput",
+          "sensitive" : false
+        },
+        "ColumnSpanFieldPath" : {
+          "displayName" : "Table Cell Column Span Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ColumnSpanFieldPath",
+          "sensitive" : false
+        },
+        "MaxMatchesPerDoc" : {
+          "displayName" : "Max Matches Per Doc",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxMatchesPerDoc",
+          "sensitive" : false
+        },
+        "internal:BuiltinEntities" : {
+          "displayName" : "internal:BuiltinEntities",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "internal:BuiltinEntities",
+          "sensitive" : false
+        },
+        "EnableUniqueMatches" : {
+          "displayName" : "Enable Unique Matches",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "EnableUniqueMatches",
+          "sensitive" : false
+        },
+        "AllowOverlaps" : {
+          "displayName" : "Allow Overlaps",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AllowOverlaps",
+          "sensitive" : false
+        },
+        "NonGreedyMatch" : {
+          "displayName" : "Non Greedy Match",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "NonGreedyMatch",
+          "sensitive" : false
+        },
+        "EntityField" : {
+          "displayName" : "Entity Field",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "EntityField",
+          "sensitive" : false
+        },
+        "CellEntity" : {
+          "displayName" : "Table Cell Entity",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CellEntity",
+          "sensitive" : false
+        },
+        "MinScore" : {
+          "displayName" : "Min Score",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MinScore",
+          "sensitive" : false
+        },
+        "CaseNormalization" : {
+          "displayName" : "Case Normalization",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CaseNormalization",
+          "sensitive" : false
+        },
+        "TokenWithPunctuation" : {
+          "displayName" : "Token With Punctuation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TokenWithPunctuation",
+          "sensitive" : false
+        },
+        "TableEntityField" : {
+          "displayName" : "Table Entity Field",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TableEntityField",
+          "sensitive" : false
+        },
+        "MaxSearchHeaderRow" : {
+          "displayName" : "Table Max Search Header Row",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MaxSearchHeaderRow",
+          "sensitive" : false
+        },
+        "CaseNormalizationBehavior" : {
+          "displayName" : "Case Normalization Behavior",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CaseNormalizationBehavior",
+          "sensitive" : false
+        },
+        "PostProcessThreshold" : {
+          "displayName" : "Post Process Threshold",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PostProcessThreshold",
+          "sensitive" : false
+        },
+        "TangibleCharacters" : {
+          "displayName" : "Tangible Characters",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TangibleCharacters",
+          "sensitive" : false
+        },
+        "RedactedOutput" : {
+          "displayName" : "Redacted Output",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RedactedOutput",
+          "sensitive" : false
+        },
+        "TableCellValuePath" : {
+          "displayName" : "Table Cell Value Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "TableCellValuePath",
+          "sensitive" : false
+        },
+        "ResourceFiles" : {
+          "displayName" : "Resource Files",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "ResourceFiles",
+          "sensitive" : false
+        },
+        "MatchCase" : {
+          "displayName" : "Match Case",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "MatchCase",
+          "sensitive" : false
+        },
+        "RedactionReplacementCharacter" : {
+          "displayName" : "Redaction Replacement Character",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "RedactionReplacementCharacter",
+          "sensitive" : false
+        },
+        "PostProcessingTask" : {
+          "displayName" : "Post Processing Tasks",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "PostProcessingTask",
+          "sensitive" : false
+        },
+        "AllowMultipleResults" : {
+          "displayName" : "Allow Multiple Results",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AllowMultipleResults",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "idol.nifi.processor.Eduction",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : {
+    "POC context" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ ],
+      "name" : "POC context",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "License Server",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "32db6dcb-019a-1000-3bce-1b8464670521"
+      }, {
+        "description" : "",
+        "name" : "SSL",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "32dbea51-019a-1000-e39d-a59743a6087f"
+      }, {
+        "description" : "",
+        "name" : "KeyView",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "32de707a-019a-1000-96b5-29b8a035b2d4"
+      } ]
+    }
+  },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "vinay.joseph@demo.local",
+    "flowIdentifier" : "Image-understanding",
+    "timestamp" : 0
+  }
 }
