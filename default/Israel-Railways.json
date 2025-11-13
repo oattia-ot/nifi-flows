@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1763009947064,
+    "description" : "Init flow for Israel Railways demo",
+    "identifier" : "Israel-Railways",
+    "lastModifiedTimestamp" : 1763009947064,
+    "name" : "Israel-Railways",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
